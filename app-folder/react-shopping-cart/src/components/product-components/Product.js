@@ -1,11 +1,13 @@
 import React from "react";
+import ImgInDiv from '../homepage/ImgInDiv' ;
 
+// My Product components are going to be cards that have an img, name, and description. 
 const Product = (props) => {
-  const { imgSrc, imgAlt, productDescription, productName, productPrice } = props;
+  const { productCategory, imgSrc, imgAlt, productDescription, productName, productPrice } = props;
 
   return (
-    <div className="product-page product" data-testid='product'>
-      <img src={imgSrc} alt={imgAlt} />
+    <div className="product-page product" data-testid='product' category={productCategory}>
+      <ImgInDiv src={imgSrc} alt={imgAlt} />
       <span>
         {productName}
       </span>
