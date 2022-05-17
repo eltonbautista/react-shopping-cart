@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Homepage Should render onto the page 1`] = `
+<div
+  data-testid="home-page"
+  id="home-page"
+>
+  <h1>
+    Legendary Murim Shop
+  </h1>
+</div>
+`;
