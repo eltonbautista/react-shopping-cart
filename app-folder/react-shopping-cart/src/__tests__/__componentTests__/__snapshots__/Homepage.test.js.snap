@@ -5,8 +5,10 @@ exports[`Tests for Homepage Should render onto the page 1`] = `
   data-testid="home-page"
   id="home-page"
 >
-  <h1>
-    Legendary Murim Shop
-  </h1>
+  <header>
+    <h1>
+      Legendary Murim Shop
+    </h1>
+  </header>
 </div>
 `;
