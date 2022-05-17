@@ -5,6 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { act, createRenderer } from "react-dom/test-utils";
 import Homepage from "../../components/homepage/Homepage";
 import renderer from 'react-test-renderer';
+import ImgInDiv from "../../components/homepage/ImgInDiv";
 
 describe('Tests for Homepage', () => {
   // Initial test to make sure component is properly rendering onto page
@@ -12,8 +13,19 @@ describe('Tests for Homepage', () => {
     const { getByRole } = render(<Homepage />);
     const tree = renderer.create(<Homepage />).toJSON();
     
-    expect(screen.getByRole('heading').textContent).toMatch(/webpage description/i);
-    // expect(tree).toMatchSnapshot();
+    expect(screen.getAllByRole('heading')[0].textContent).toMatch(/webpage description/i);
+    expect(screen.getAllByRole('heading')[1].textContent).toMatch(/extra information heading/i);
+    
+  });
+
+  // Checks if ImgInDiv component is using proper src and alt attributes
+  it('Image should have proper source and alt', () => {
+    const { getByRole } = render(<ImgInDiv src='url' alt='randomAlt' />);
+
+    expect(screen.getByRole('img').src).toMatch('url');
+    expect(screen.getByRole('img').alt).toMatch('randomAlt');
 
   });
+
+  
 });

@@ -16,7 +16,7 @@ function App() {
       </header>
 
       <div className='app-child-container'>
-        <Homepage description={'Shop Description'} />
+        <Homepage />
       </div>
 
       <footer>

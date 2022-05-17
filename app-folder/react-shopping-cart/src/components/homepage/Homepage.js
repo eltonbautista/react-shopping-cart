@@ -1,4 +1,5 @@
 import React from "react";
+import ImgInDiv from "./ImgInDiv";
 
 const Homepage = (props) => {
   // An object to store information that's used in the JSX
@@ -8,6 +9,7 @@ const Homepage = (props) => {
     imgOneAlt: '',
     imgTwoSrc: '',
     imgTwoAlt: '',
+    extraInfoHeading: 'Extra Information Heading',
     extraInfo: '',
   }
 
@@ -17,13 +19,10 @@ const Homepage = (props) => {
       <div className="homepage about-info">
         <h1>{fillInformation.description}</h1>
       </div>
-      <div className="homepage img-one">
-        <img src={fillInformation.imgOneSrc} alt={fillInformation.imgOneAlt}/>
-      </div>
-      <div className="homepage img-two">
-        <img src={fillInformation.imgTwoSrc} alt={fillInformation.imgTwoAlt} />
-      </div>
+      <ImgInDiv src={fillInformation.imgOneSrc} alt={fillInformation.imgOneAlt} />
+      <ImgInDiv src={fillInformation.imgTwoSrc} alt={fillInformation.imgTwoAlt} />
       <div className="homepage extra-info">
+        <h3>{fillInformation.extraInfoHeading}</h3>
         <p>
           {fillInformation.extraInfo}
         </p>
