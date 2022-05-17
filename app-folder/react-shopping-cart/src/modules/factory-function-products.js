@@ -15,8 +15,7 @@ const factoryFunctionProducts = (name, description, price, imgSrc, imgAlt, isInC
   }
 }
 
-const firstProduct = factoryFunctionProducts('death bolt', 'this is deadly', 329.99, 'url', 'black lightning', false);
-console.log(firstProduct);
+// const firstProduct = factoryFunctionProducts('death bolt', 'this is deadly', 329.99, 'url', 'black lightning', false);
 
 const arrayOfProducts =
  [
