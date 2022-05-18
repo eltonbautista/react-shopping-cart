@@ -9,7 +9,7 @@ import { act } from "react-dom/test-utils";
 
 describe('Testing App component', () => {
   it('Initial test to make sure App is rendering correctly', () => {
-    render(<App title='my shopping cart' />);
-    expect(screen.getByTestId('App').textContent).toMatch(/my shopping cart/i);
+    render(<App title='My Shopping Cart' />);
+    expect(screen.getByText('My Shopping Cart')).toBeInTheDocument();
   })
 })

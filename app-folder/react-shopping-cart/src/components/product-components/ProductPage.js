@@ -1,18 +1,11 @@
 import React from "react";
-
+import ProductContainer from "./ProductContainer";
 const ProductPage = (props) => {
-  const { productHeading } = props;
   return (
     <div id="product-page" data-testid='product-page'>
-      
-      <div>
-        <h1>{productHeading}</h1>
-      </div>
-
-      {/* <div className="product-page card-container"> */}
-        {/* cards */}
-      {/* </div> */}
-
+      <ProductContainer products={['Category 1']} productHeading='Damage' />
+      <ProductContainer products={['Category 2']} productHeading='Cultivation' />
+      <ProductContainer products={['Category 3']} productHeading='Movement' />
     </div>
   )
 }

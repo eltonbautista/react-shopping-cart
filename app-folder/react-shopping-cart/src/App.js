@@ -1,5 +1,7 @@
 import './App.css';
 import Homepage from './components/homepage/Homepage';
+import ProductPage from './components/product-components/ProductPage';
+
 function App({ title, }) {
 
   return (
@@ -18,6 +20,7 @@ function App({ title, }) {
 
       <div className='app-child-container'>
         <Homepage />
+        <ProductPage />
       </div>
 
       <footer>
