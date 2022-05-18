@@ -23,20 +23,21 @@ import { arrayOfProducts } from './modules/factory-function-products';
 
 
 const RouteSwitch = () => {
+  const mensProductsArray = [...arrayOfProducts[0]];
+  const womensProductsArray = [...arrayOfProducts[1]];
 
-  const productChildren = 
-  [
-    <ProductContainer products={arrayOfProducts[0]} />,
-    <ProductContainer products={arrayOfProducts[1]} />,
-  ];
+  const productPageChildren = 
+  [<ProductContainer products={mensProductsArray} />, <ProductContainer products={womensProductsArray} />, ];
+
+  const [mensProducts, womensProducts] = productPageChildren;
 
   return (    
    <BrowserRouter>
       <Routes>
         <Route path='/' element={<App title='Meemo Boutique' />}>
           <Route path='homepage' element={<Homepage />} />
-          <Route path='mens' element={<ProductPage productHeading= "Men's" children={productChildren[0]} />} />
-          <Route path='womens' element={<ProductPage productHeading= "Women's" children={productChildren[1]} />} />
+          <Route path='mens' element={<ProductPage productHeading= "Men's" children={mensProducts} />} />
+          <Route path='womens' element={<ProductPage productHeading= "Women's" children={womensProducts} />} />
         </Route>
       </Routes>
    </BrowserRouter>);

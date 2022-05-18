@@ -32,8 +32,8 @@ const factoryFunctionProducts = (productName, productCategory, productPrice, img
     decrementQuantity
   }
 }
-// const firstProduct = <Product productObject={factoryFunctionProducts('death bolt', 'Damage', 329.99, 'url', 'black lightning', false)} />
-// const secondProduct = factoryFunctionProducts('heavenly grace', 'this is heavenly', 420.69, 'url', 'graces from heaven', false)
+
+// NEED TO DRY
 const arrayOfProducts =
  [
    [
