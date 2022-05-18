@@ -10,10 +10,17 @@ function App({ title, }) {
         <h1>{title}</h1>
         <nav id="nav-bar">
           {/* Link component can only go in <nav> */}
-          <Link to='homepage'><button>Home</button></Link>
-          <Link to='product-category-zero' ><button type='button'>Product Page Zero</button></Link> {' '}
-          <Link to='product-category-one' ><button type='button'>Product Page One</button></Link>{' '}
-          <Link to='product-category-two' ><button type='button'>Product Page Two</button></Link>
+          <Link to='homepage'> 
+          <button>Home</button> 
+          </Link>
+
+          <Link to='mens' > 
+          <button data-testid='mens' type='button'>Men's</button> 
+          </Link> {' '}
+
+          <Link to='womens' > 
+          <button data-testid='womens' type='button'>Women's</button> 
+          </Link>{' '}
         </nav>
 {/* Cart Button will also be a route, clicking it will take the user to a page that shows the purchased items, price, etc. */}
         <button id="cart-button">Cart Button</button>

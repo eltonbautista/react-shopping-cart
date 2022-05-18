@@ -15,7 +15,7 @@ describe('Testing App component through my RouteSwitch component', () => {
       render(<RouteSwitch />);
     })
 
-    expect(screen.getByText('Murim Shopping Cart')).toBeInTheDocument();
+    expect(screen.getByText('Meemo Boutique')).toBeInTheDocument();
   })
 
   it('Testing React Router and Links by simulating user button clicks', async () => {
@@ -28,13 +28,11 @@ describe('Testing App component through my RouteSwitch component', () => {
     userEvent.click(screen.getByRole('button', {name: /home/i}));
     expect(screen.getByText('Webpage Description')).toBeInTheDocument();
 
-    userEvent.click(screen.getByRole('button', {name: /product page zero/i}));
-    expect(screen.getByText('Damage')).toBeInTheDocument();
+    userEvent.click(screen.getByTestId('mens'));
+    expect(screen.getAllByText("Men's")[0]).toBeInTheDocument();
 
-    userEvent.click(screen.getByRole('button', {name: /product page one/i}));
-    expect(screen.getByText('Cultivation')).toBeInTheDocument();
+    userEvent.click(screen.getByTestId('womens'));
+    expect(screen.getAllByText("Women's")[1]).toBeInTheDocument();
 
-    userEvent.click(screen.getByRole('button', {name: /product page two/i}));
-    expect(screen.getByText('Movement')).toBeInTheDocument();
   })
 })

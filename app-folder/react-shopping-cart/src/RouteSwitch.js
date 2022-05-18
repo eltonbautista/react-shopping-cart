@@ -32,11 +32,10 @@ const productChildren =
     return (    
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<App title='Murim Shopping Cart' />}>
+          <Route path='/' element={<App title='Meemo Boutique' />}>
             <Route path='homepage' element={<Homepage />} />
-            <Route path='product-category-zero' element={<ProductPage productHeading='Damage' children={productChildren[0]} />} />
-            <Route path='product-category-one' element={<ProductPage productHeading='Cultivation' children={productChildren[1]} />} />
-            <Route path='product-category-two' element={<ProductPage productHeading='Movement' children={productChildren[2]} />} />
+            <Route path='mens' element={<ProductPage productHeading= "Men's" children={productChildren[0]} />} />
+            <Route path='womens' element={<ProductPage productHeading= "Women's" children={productChildren[1]} />} />
           </Route>
         </Routes>
       </BrowserRouter>);
