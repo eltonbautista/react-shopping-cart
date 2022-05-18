@@ -1,23 +1,29 @@
 // A factory function responsible for creating my product objects.
+import Product from "../components/product-components/Product";
 
-const factoryFunctionProducts = (name, description, price, imgSrc, imgAlt, isInCart) => {
+const factoryFunctionProducts = (productName, productDescription, productCategory, productPrice, imgSrc, imgAlt, isInCart) => {
+  const initialPrice = parseFloat(productPrice);
+  let newPrice;
 
   const isInCartFunction = function(bool) {
     return this.isInCart = bool;
   };
 
   const incrementQuantity = function() {
+    this.productPrice += initialPrice;
     return this.quantity += 1;
   };
 
   const decrementQuantity = function() {
+    this.productPrice -= initialPrice;
     return this.quantity -= 1;
   };
 
   return {
-    name,
-    description,
-    price: `$${price}`,
+    productName,
+    productDescription,
+    productCategory,
+    productPrice,
     imgSrc,
     imgAlt,
     isInCart,
@@ -27,13 +33,13 @@ const factoryFunctionProducts = (name, description, price, imgSrc, imgAlt, isInC
     decrementQuantity
   }
 }
-
+const firstProduct = <Product productObject={factoryFunctionProducts('death bolt', 'this is deadly', 'Combat', 329.99, 'url', 'black lightning', false)} />
+const secondProduct = factoryFunctionProducts('heavenly grace', 'this is heavenly', 420.69, 'url', 'graces from heaven', false)
 
 
 const arrayOfProducts =
  [
-   [factoryFunctionProducts('death bolt', 'this is deadly', 329.99, 'url', 'black lightning', false),
-    factoryFunctionProducts('death bolt', 'this is deadly', 329.99, 'url', 'black lightning', false) ],
+   [firstProduct],
    [],
    [],
  ]

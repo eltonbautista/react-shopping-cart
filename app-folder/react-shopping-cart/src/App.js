@@ -1,10 +1,9 @@
 import './App.css';
-import Homepage from './components/homepage/Homepage';
-import ProductPage from './components/product-components/ProductPage';
 import { Link, Outlet } from 'react-router-dom';
 
 function App({ title, }) {
   // Since my app is using routing, my cart needs to be in a non-changing place(?) i.e. nav bar.
+
   return (
     <div className="App" id='app' data-testid='App'>
       <header>
