@@ -1,10 +1,11 @@
 import './App.css';
 import Homepage from './components/homepage/Homepage';
-function App() {
+function App({ title, }) {
+
   return (
-    <div className="App" data-testid='App'>
+    <div className="App" id='app' data-testid='App'>
       <header>
-        <h1>Legendary Murim Shop</h1>
+        <h1>{title}</h1>
         <nav id="nav-bar">
           {/* These are going to be routes later on */}
           Homepage logo or name

@@ -1,4 +1,6 @@
-import React, { ReactDOM } from "react";
+import React from "react";
+import ReactDOM from 'react-dom';
+import { createRoot } from "react-dom/client";
 import { getByTestId, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";  // optional
 import userEvent from "@testing-library/user-event";
@@ -7,8 +9,7 @@ import { act } from "react-dom/test-utils";
 
 describe('Testing App component', () => {
   it('Initial test to make sure App is rendering correctly', () => {
-    const { getByTestId } = render(<App />);
-
-    expect(screen.getByTestId('App').textContent).toMatch(/legendary murim shop/i);
+    render(<App title='my shopping cart' />);
+    expect(screen.getByTestId('App').textContent).toMatch(/my shopping cart/i);
   })
 })
