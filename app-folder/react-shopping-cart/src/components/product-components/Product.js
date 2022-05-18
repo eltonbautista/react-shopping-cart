@@ -14,6 +14,7 @@ const Product = (props) => {
       <p>
         {productPrice}
       </p>
+      <button type="button" >Add to bag</button>
     </div>
   )
 };
