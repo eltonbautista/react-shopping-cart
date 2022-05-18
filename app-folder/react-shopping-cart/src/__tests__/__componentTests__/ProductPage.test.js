@@ -1,30 +1,28 @@
 import React, { ReactDOM } from "react";
 import { getByTestId, render, screen, } from "@testing-library/react";
 import "@testing-library/jest-dom";  // optional
-
+import userEvent from "@testing-library/user-event";
 
 import ProductPage from "../../components/product-components/ProductPage";
 import ProductContainer from "../../components/product-components/ProductContainer";
 import Product from "../../components/product-components/Product";
+import factoryFunctionProducts from "../../modules/factory-function-products";
+import { arrayOfProducts } from "../../modules/factory-function-products";
+import RouteSwitch from "../../RouteSwitch";
 
-describe('Tests for Product', () => {
-
-  it('Making sure Product Page renders properly', () => {
-    render(<ProductPage productHeading='Damaging Abilities' />)
-
-    expect(screen.getByRole('heading').textContent).toMatch(/damaging abilities/i);
-  })
+describe('Tests for Product Components', () => {
+  const firstProduct = arrayOfProducts[0][0];
 
   it('Making sure ProductContainer renders properly', () => {
-    render(<ProductContainer products='Product Array Cards'/>);
+    render(<ProductContainer products={arrayOfProducts[0]}/>);
 
-    expect(screen.getByTestId('product-container').textContent).toMatch(/product array cards/i);
+    expect(screen.getByTestId('product-container').textContent).toMatch(/men's/i);
   })
 
   it('Making sure Product renders properly', () => {
-    render(<Product imgSrc='url' imgAlt='randomAlt' productDescription = 'Random product description' />)
+    render(firstProduct);
 
-    expect(screen.getByTestId('product').textContent).toMatch(/random product description/i);
-    expect(screen.getByRole('img').src).toMatch(/url/i);
+    expect(screen.getByTestId('product').textContent).toMatch(/men's/i);
+    expect(screen.getByRole('img').src).toMatch(/men-blue-jacket.jpg/i);
   })
 });
