@@ -1,5 +1,7 @@
 import React from "react";
-import ProductContainer from "./ProductContainer";
+
+// ProductPage is responsible for changing the title of my page, 
+// and having different ProductContainer children - which is passed by props. 
 const ProductPage = (props) => {
   const { productHeading, children } = props;
   return (

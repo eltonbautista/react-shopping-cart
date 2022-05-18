@@ -1,3 +1,5 @@
+// A factory function responsible for creating my product objects.
+
 const factoryFunctionProducts = (name, description, price, imgSrc, imgAlt, isInCart) => {
 
   const isInCartFunction = function(bool) {

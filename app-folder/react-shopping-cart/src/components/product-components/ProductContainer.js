@@ -1,5 +1,6 @@
 import React from "react";
 
+// A function component which is responsible for containing my products/cards.
 const ProductContainer = (props) => {
   const { products, } = props;
 
