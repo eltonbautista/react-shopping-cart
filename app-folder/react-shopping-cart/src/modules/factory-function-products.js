@@ -1,7 +1,7 @@
 // A factory function responsible for creating my product objects.
 import Product from "../components/product-components/Product";
 
-const factoryFunctionProducts = (productName, productDescription, productCategory, productPrice, imgSrc, imgAlt, isInCart) => {
+const factoryFunctionProducts = (productName, productCategory, productPrice, imgSrc, imgAlt, isInCart) => {
   const initialPrice = parseFloat(productPrice);
   let newPrice;
 
@@ -21,7 +21,6 @@ const factoryFunctionProducts = (productName, productDescription, productCategor
 
   return {
     productName,
-    productDescription,
     productCategory,
     productPrice,
     imgSrc,
@@ -33,18 +32,17 @@ const factoryFunctionProducts = (productName, productDescription, productCategor
     decrementQuantity
   }
 }
-const firstProduct = <Product productObject={factoryFunctionProducts('death bolt', 'this is deadly', 'Damage', 329.99, 'url', 'black lightning', false)} />
-const secondProduct = factoryFunctionProducts('heavenly grace', 'this is heavenly', 420.69, 'url', 'graces from heaven', false)
+// const firstProduct = <Product productObject={factoryFunctionProducts('death bolt', 'Damage', 329.99, 'url', 'black lightning', false)} />
+// const secondProduct = factoryFunctionProducts('heavenly grace', 'this is heavenly', 420.69, 'url', 'graces from heaven', false)
 
 
 const arrayOfProducts =
  [
-   [firstProduct],
-   [],
+   [<Product productObject={factoryFunctionProducts("Men's Blue Jacket", "Men's", 69.99, '' )} />],
    [],
  ]
 
-//  const [damage, cultivation, movement] = arrayOfProducts;
+//  const [mens, womens] = arrayOfProducts;
 
 export default factoryFunctionProducts;
 export { arrayOfProducts };
