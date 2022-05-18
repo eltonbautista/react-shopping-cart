@@ -16,6 +16,7 @@ function App({ title, }) {
           <Link to='product-category-one' ><button type='button'>Product Page One</button></Link>{' '}
           <Link to='product-category-two' ><button type='button'>Product Page Two</button></Link>
         </nav>
+{/* Cart Button will also be a route, clicking it will take the user to a page that shows the purchased items, price, etc. */}
         <button id="cart-button">Cart Button</button>
       </header>
       {/* The Outlet component is here because initially,
