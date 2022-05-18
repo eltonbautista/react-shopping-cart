@@ -33,7 +33,7 @@ const factoryFunctionProducts = (productName, productDescription, productCategor
     decrementQuantity
   }
 }
-const firstProduct = <Product productObject={factoryFunctionProducts('death bolt', 'this is deadly', 'Combat', 329.99, 'url', 'black lightning', false)} />
+const firstProduct = <Product productObject={factoryFunctionProducts('death bolt', 'this is deadly', 'Damage', 329.99, 'url', 'black lightning', false)} />
 const secondProduct = factoryFunctionProducts('heavenly grace', 'this is heavenly', 420.69, 'url', 'graces from heaven', false)
 
 
