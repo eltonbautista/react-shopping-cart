@@ -8,7 +8,7 @@ import RouteSwitch from "../../RouteSwitch";
 
 
 describe('Testing App component through my RouteSwitch component', () => {
-  //I have to use my RouteSwitch component because <App /> is using Router. 
+  // I have to use my RouteSwitch component because <App /> is using Router. 
 
   it('Initial test to make sure App is rendering correctly', async () => {
     act(() => {
@@ -33,6 +33,8 @@ describe('Testing App component through my RouteSwitch component', () => {
 
     userEvent.click(screen.getByTestId('womens'));
     expect(screen.getAllByText("Women's")[1]).toBeInTheDocument();
-
+    
+    userEvent.click(screen.getByTestId('shopping-cart-page'));
+    expect(screen.getByText('My Shopping Cart')).toBeInTheDocument();
   })
 })

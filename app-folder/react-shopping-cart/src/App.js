@@ -11,19 +11,22 @@ function App({ title, }) {
         <nav id="nav-bar">
           {/* Link component can only go in <nav> */}
           <Link to='homepage'> 
-          <button>Home</button> 
+            <button>Home</button> 
           </Link>
 
           <Link to='mens' > 
-          <button data-testid='mens' type='button'>Men's</button> 
+            <button data-testid='mens' type='button'>Men's</button> 
           </Link> {' '}
 
           <Link to='womens' > 
-          <button data-testid='womens' type='button'>Women's</button> 
+            <button data-testid='womens' type='button'>Women's</button> 
           </Link>{' '}
+
+          <Link to='shopping-cart'>
+            <button data-testid='shopping-cart-page' id="cart-button">Cart</button>
+          </Link> 
         </nav>
 {/* Cart Button will also be a route, clicking it will take the user to a page that shows the purchased items, price, etc. */}
-        <button id="cart-button">Cart Button</button>
       </header>
       {/* The Outlet component is here because initially,
           if I did not use routing then all of my child components in links would be in that container */}

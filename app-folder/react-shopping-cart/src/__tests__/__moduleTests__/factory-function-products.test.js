@@ -3,7 +3,6 @@ import { arrayOfProducts } from "../../modules/factory-function-products";
 describe('Testing my product factory function', () => {
   const firstProduct = arrayOfProducts[0][0];
   const firstProductProperties = firstProduct.props.productObject;
-  console.log(firstProductProperties)
 
   it('Checking if object has proper properties', () => {
     expect(firstProductProperties).toStrictEqual({
