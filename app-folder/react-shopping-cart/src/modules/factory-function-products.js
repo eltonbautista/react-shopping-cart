@@ -84,7 +84,6 @@ const arrayOfProducts =
     ],
  ]
 
-//  const [mens, womens] = arrayOfProducts;
 
 export default factoryFunctionProducts;
 export { arrayOfProducts };

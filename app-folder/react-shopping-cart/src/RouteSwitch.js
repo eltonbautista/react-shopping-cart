@@ -24,10 +24,9 @@ import Product from './components/product-components/Product';
 
 
 const RouteSwitch = () => {
-  const myNewProducts = arrayOfProducts;
 
-  const [mensProducts, setMensProducts] = useState(myNewProducts[0]);
-  const [womensProducts, setWomensProducts] = useState(myNewProducts[1]);
+  const [mensProductObjects, setMensProductObjects] = useState(arrayOfProducts[0]);
+  const [womensProductObjects, setWomensProductObjects] = useState(arrayOfProducts[1]);
 
   const createMyProducts = (supplyArr) => {
     const arrToPushInto = [];
@@ -37,29 +36,12 @@ const RouteSwitch = () => {
     })
     return arrToPushInto;
   }
+
+  const mensProducts = createMyProducts(mensProductObjects);
+  const womensProducts = createMyProducts(womensProductObjects);
   
-  const mensProductsArray = [];
-  const womensProductsArray = [];
-
-  const prodOne = createMyProducts(mensProducts);
-  const prodTwo = createMyProducts(womensProducts);
-  // console.log(prodOne);
-
-  // myNewProducts[0].forEach((myProdObj) => {
-  //   mensProductsArray.push(createMyProducts(myProdObj));
-  // });
-  // myNewProducts[1].forEach((myProdObj) => {
-  //   womensProductsArray.push(createMyProducts(myProdObj));
-  // });
-
-  // mensProductsArray.forEach((product) => {
-  //   product.props.productObject.productButtonHandler = productButtonHandler;
-  // });
-
-
-
   const productPageChildren =
-  [<ProductContainer products={prodOne} />, <ProductContainer products={prodTwo} />, ];
+  [<ProductContainer products={mensProducts} />, <ProductContainer products={womensProducts} />, ];
 
 
   function productButtonHandler(e) {
@@ -69,11 +51,13 @@ const RouteSwitch = () => {
     console.log(myProductDiv.attributes.category.value)
 
     if(myProductDiv.attributes.category.value === 'Men\'s') {
-      mensProducts[indexOfProduct].isInCartFunction();
-      setMensProducts([...mensProducts]);
+      mensProductObjects[indexOfProduct].isInCartFunction();
+      // mensProductObjects[indexOfProduct].incrementQuantity();
+      // THIS IS WHAT WILL BE IN A SEPARATE EVENTHANDLER AND PASSED DOWN TO QUANTITY FACTOR IN SHOPPINGCART COMPONENT + - BUTTONS
+      setMensProductObjects([...mensProductObjects]);
     } else if (myProductDiv.attributes.category.value === 'Women\'s') {
-      womensProducts[indexOfProduct].isInCartFunction();
-      setWomensProducts([...womensProducts]);
+      womensProductObjects[indexOfProduct].isInCartFunction();
+      setWomensProductObjects([...womensProductObjects]);
     };
 
   };

@@ -11,10 +11,15 @@ import { arrayOfProducts } from "../../modules/factory-function-products";
 import RouteSwitch from "../../RouteSwitch";
 
 describe('Tests for Product Components', () => {
-  const firstProduct = arrayOfProducts[0][0];
+  const product = arrayOfProducts[0][0];
+  const myProducts = arrayOfProducts[0].map((prod) => {
 
+    return <Product productObject={prod} />
+  })
+  const firstProduct = <Product productObject={product} />
+  // console.log(myProducts);
   it('Making sure ProductContainer renders properly', () => {
-    render(<ProductContainer products={arrayOfProducts[0]}/>);
+    render(<ProductContainer products={myProducts}/>);
 
     expect(screen.getByTestId('product-container').textContent).toMatch(/men's/i);
   })
