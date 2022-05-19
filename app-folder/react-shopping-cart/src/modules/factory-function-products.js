@@ -5,8 +5,14 @@ const factoryFunctionProducts = (productName, productCategory, productPrice, img
   const initialPrice = parseFloat(productPrice);
   let newPrice;
 
-  const isInCartFunction = function(bool) {
-    return this.isInCart = bool;
+  const isInCartFunction = function() {
+    if(this.isInCart === false) {
+      this.isInCart = true;
+    } else if (this.isInCart === true) {
+      this.isInCart = false;
+    }
+
+    return this.isInCart;
   };
 
   const incrementQuantity = function() {
@@ -38,43 +44,43 @@ const arrayOfProducts =
  [
    [
     <Product productObject=
-    {factoryFunctionProducts("Men's Blue Jacket", "Men's", 69.99, require('../assets/images/mens/men-blue-jacket.jpg'), 'young man in blue-jacket' )} />,
+    {factoryFunctionProducts("Men's Blue Jacket", "Men's", 69.99, require('../assets/images/mens/men-blue-jacket.jpg'), 'young man in blue-jacket', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's Crewneck", "Men's", 39.99, require('../assets/images/mens/men-crewneck.jpg'), 'young man in crewneck' )} />,
+    {factoryFunctionProducts("Men's Crewneck", "Men's", 39.99, require('../assets/images/mens/men-crewneck.jpg'), 'young man in crewneck', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's Shirt", "Men's", 19.99, require('../assets/images/mens/men-green-shirt.jpg'), 'man in green shirt' )} />,
+    {factoryFunctionProducts("Men's Shirt", "Men's", 19.99, require('../assets/images/mens/men-green-shirt.jpg'), 'man in green shirt', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's Hoodie", "Men's", 49.99, require('../assets/images/mens/men-hoodie.jpg'), 'young man in hoodie' )} />,
+    {factoryFunctionProducts("Men's Hoodie", "Men's", 49.99, require('../assets/images/mens/men-hoodie.jpg'), 'young man in hoodie', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's Suit", "Men's", 129.99, require('../assets/images/mens/men-suit.jpg'), 'young man in suit' )} />,
+    {factoryFunctionProducts("Men's Suit", "Men's", 129.99, require('../assets/images/mens/men-suit.jpg'), 'young man in suit', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's White Pants", "Men's", 59.99, require('../assets/images/mens/men-white-pants.jpg'), 'young man in white pants' )} />,
+    {factoryFunctionProducts("Men's White Pants", "Men's", 59.99, require('../assets/images/mens/men-white-pants.jpg'), 'young man in white pants', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's Bracelet", "Men's", 29.99, require('../assets/images/mens/men-bracelet.jpg'), 'bracelet' )} />,
+    {factoryFunctionProducts("Men's Bracelet", "Men's", 29.99, require('../assets/images/mens/men-bracelet.jpg'), 'bracelet', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's Leather Pouch", "Men's", 59.99, require('../assets/images/mens/men-leather-pouch.jpg'), 'accessories and leather pouch' )} />,
+    {factoryFunctionProducts("Men's Leather Pouch", "Men's", 59.99, require('../assets/images/mens/men-leather-pouch.jpg'), 'accessories and leather pouch', false )} />,
     <Product productObject=
-    {factoryFunctionProducts("Men's Watch", "Men's", 69.99, require('../assets/images/mens/men-watch.jpg'), 'men\'s watch' )} />
+    {factoryFunctionProducts("Men's Watch", "Men's", 69.99, require('../assets/images/mens/men-watch.jpg'), 'men\'s watch', false )} />
    ],
    [
      <Product productObject=
-     {factoryFunctionProducts("Women's Black Tank", "Women's", 19.99, require('../assets/images/womens/women-black-tank.jpg'), 'young woman in black tanktop' )} />,
+     {factoryFunctionProducts("Women's Black Tank", "Women's", 19.99, require('../assets/images/womens/women-black-tank.jpg'), 'young woman in black tanktop', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Blazer", "Women's", 69.99, require('../assets/images/womens/women-blazer.jpg'), 'young woman in orange blazer' )} />,
+     {factoryFunctionProducts("Women's Blazer", "Women's", 69.99, require('../assets/images/womens/women-blazer.jpg'), 'young woman in orange blazer', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Button-Up", "Women's", 39.99, require('../assets/images/womens/women-button-up.jpg'), 'young woman in button-up' )} />,
+     {factoryFunctionProducts("Women's Button-Up", "Women's", 39.99, require('../assets/images/womens/women-button-up.jpg'), 'young woman in button-up', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Denim Jacket", "Women's", 49.99, require('../assets/images/womens/women-denim-jacket.jpg'), 'young woman in denim jacket' )} />,
+     {factoryFunctionProducts("Women's Denim Jacket", "Women's", 49.99, require('../assets/images/womens/women-denim-jacket.jpg'), 'young woman in denim jacket', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Shirt", "Women's", 21.99, require('../assets/images/womens/women-shirt.jpg'), 'young woman in shirt' )} />,
+     {factoryFunctionProducts("Women's Shirt", "Women's", 21.99, require('../assets/images/womens/women-shirt.jpg'), 'young woman in shirt', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Denim Shorts", "Women's", 39.99, require('../assets/images/womens/women-shorts.jpg'), 'young woman in denim shorts' )} />,
+     {factoryFunctionProducts("Women's Denim Shorts", "Women's", 39.99, require('../assets/images/womens/women-shorts.jpg'), 'young woman in denim shorts', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Gold Chain", "Women's", 49.99, require('../assets/images/womens/women-gold.jpg'), 'women\'s gold chain' )} />,
+     {factoryFunctionProducts("Women's Gold Chain", "Women's", 49.99, require('../assets/images/womens/women-gold.jpg'), 'women\'s gold chain', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Hand Chain", "Women's", 39.99, require('../assets/images/womens/women-hand-chain.jpg'), 'hand with chain' )} />,
+     {factoryFunctionProducts("Women's Hand Chain", "Women's", 39.99, require('../assets/images/womens/women-hand-chain.jpg'), 'hand with chain', false )} />,
      <Product productObject=
-     {factoryFunctionProducts("Women's Watch", "Women's", 39.99, require('../assets/images/womens/women-watch.jpg'), 'women\'s watch' )} />,
+     {factoryFunctionProducts("Women's Watch", "Women's", 39.99, require('../assets/images/womens/women-watch.jpg'), 'women\'s watch', false )} />,
     ],
  ]
 

@@ -3,10 +3,13 @@ import ImgInDiv from '../homepage/ImgInDiv' ;
 
 // My Product components are going to be cards that have an img, name, and description. 
 const Product = (props) => {
-  const { productName, productCategory, imgSrc, imgAlt, productPrice } = props.productObject;
+  const { productName, productCategory, imgSrc, imgAlt, productPrice, productButtonHandler, isInCart } = props.productObject;
+  const itemId = productName[0].toLowerCase() + productName.replace(/\s+/g, '').replace("'", '').slice(1); 
   
+  // console.log(props.productObject)
+
   return (
-    <div className="product-page product" data-testid='product' category={productCategory}>
+    <div className="product-page product" data-testid='product' category={productCategory} name={itemId} data-isincart={isInCart}>
       <ImgInDiv src={imgSrc} alt={imgAlt} />
       <span>
         {productName}
@@ -14,7 +17,7 @@ const Product = (props) => {
       <p>
         {productPrice}
       </p>
-      <button type="button" >Add to bag</button>
+      <button onClick={productButtonHandler} type="button" >{!isInCart ? 'Add to bag' : 'Remove from bag'}</button>
     </div>
   )
 };
