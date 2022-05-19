@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -24,37 +24,59 @@ import Product from './components/product-components/Product';
 
 
 const RouteSwitch = () => {
-  const createMyProducts = () => {
-    return (
-      <Product />
-    )
+  const myNewProducts = arrayOfProducts;
+
+  const [mensProducts, setMensProducts] = useState(myNewProducts[0]);
+  const [womensProducts, setWomensProducts] = useState(myNewProducts[1]);
+
+  const createMyProducts = (supplyArr) => {
+    const arrToPushInto = [];
+
+    supplyArr.forEach((prod) => {
+      arrToPushInto.push(<Product productObject={prod} onClickHandler={productButtonHandler} />);
+    })
+    return arrToPushInto;
   }
+  
+  const mensProductsArray = [];
+  const womensProductsArray = [];
 
-  const mensProductsArray = [...arrayOfProducts[0]];
-  const womensProductsArray = [...arrayOfProducts[1]];
+  const prodOne = createMyProducts(mensProducts);
+  const prodTwo = createMyProducts(womensProducts);
+  // console.log(prodOne);
 
-  mensProductsArray.forEach((product) => {
-    product.props.productObject.productButtonHandler = productButtonHandler;
-  });
+  // myNewProducts[0].forEach((myProdObj) => {
+  //   mensProductsArray.push(createMyProducts(myProdObj));
+  // });
+  // myNewProducts[1].forEach((myProdObj) => {
+  //   womensProductsArray.push(createMyProducts(myProdObj));
+  // });
 
-  const [mensProducts, setMensProducts] = useState(mensProductsArray);
-  const [womensProducts, setWomensProducts] = useState(womensProductsArray);
+  // mensProductsArray.forEach((product) => {
+  //   product.props.productObject.productButtonHandler = productButtonHandler;
+  // });
+
+
 
   const productPageChildren =
-  [<ProductContainer products={mensProducts} />, <ProductContainer products={womensProducts} />, ];
+  [<ProductContainer products={prodOne} />, <ProductContainer products={prodTwo} />, ];
+
 
   function productButtonHandler(e) {
     const makeIterable = [...e.target.parentElement.parentElement.children];
     const myProductDiv = e.target.parentElement;
     const indexOfProduct = makeIterable.indexOf(myProductDiv);
-    console.log(mensProducts[indexOfProduct]);
-    console.log(myProductDiv);
+    console.log(myProductDiv.attributes.category.value)
+
     if(myProductDiv.attributes.category.value === 'Men\'s') {
-      mensProducts[indexOfProduct].props.productObject.isInCartFunction();
+      mensProducts[indexOfProduct].isInCartFunction();
       setMensProducts([...mensProducts]);
-      console.log(mensProducts);
-    }
-  }
+    } else if (myProductDiv.attributes.category.value === 'Women\'s') {
+      womensProducts[indexOfProduct].isInCartFunction();
+      setWomensProducts([...womensProducts]);
+    };
+
+  };
 
   
 
