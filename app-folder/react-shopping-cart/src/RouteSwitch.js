@@ -24,9 +24,16 @@ import Product from './components/product-components/Product';
 
 
 const RouteSwitch = () => {
-
+  // MY STATES
   const [mensProductObjects, setMensProductObjects] = useState(arrayOfProducts[0]);
   const [womensProductObjects, setWomensProductObjects] = useState(arrayOfProducts[1]);
+
+  const [cartProducts, setCartProducts] = useState([]);
+  // const [cartTitle, setCartTitle] = useState(cartProducts.length);
+
+
+
+
 
   const createMyProducts = (supplyArr) => {
     const arrToPushInto = [];
@@ -48,7 +55,6 @@ const RouteSwitch = () => {
     const makeIterable = [...e.target.parentElement.parentElement.children];
     const myProductDiv = e.target.parentElement;
     const indexOfProduct = makeIterable.indexOf(myProductDiv);
-    console.log(myProductDiv.attributes.category.value)
 
     if(myProductDiv.attributes.category.value === 'Men\'s') {
       mensProductObjects[indexOfProduct].isInCartFunction();
@@ -71,7 +77,7 @@ const RouteSwitch = () => {
           <Route path='homepage' element={<Homepage />} />
           <Route path='mens' element={<ProductPage productHeading= "Men's" children={productPageChildren[0]} productButtonHandler={productButtonHandler} />} />
           <Route path='womens' element={<ProductPage productHeading= "Women's" children={productPageChildren[1]} productButtonHandler={productButtonHandler} />} />
-          <Route path='shopping-cart' element={<ShoppingCart />} />
+          <Route path='shopping-cart' element={<ShoppingCart arrayState={cartProducts} title={cartProducts.length} />} />
         </Route>
       </Routes>
    </BrowserRouter>);

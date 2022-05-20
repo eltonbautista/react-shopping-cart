@@ -9,6 +9,7 @@ describe('Testing my product factory function', () => {
       productName: "Men's Blue Jacket",
       productCategory: "Men's",
       productPrice: 69.99,
+      productTotal: 69.99,
       imgSrc: 'men-blue-jacket.jpg',
       imgAlt: 'young man in blue-jacket',
       isInCart: false,

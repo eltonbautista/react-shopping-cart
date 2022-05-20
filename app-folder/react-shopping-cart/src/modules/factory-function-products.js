@@ -2,7 +2,7 @@
 import Product from "../components/product-components/Product";
 
 const factoryFunctionProducts = (productName, productCategory, productTotal, imgSrc, imgAlt, isInCart) => {
-  const initialPrice = parseFloat(productTotal.toFixed(2));
+  const productPrice = parseFloat(productTotal.toFixed(2));
   let newPrice;
   const isInCartFunction = function() {
     !this.isInCart ? this.isInCart = true : this.isInCart = false;
@@ -17,12 +17,12 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
   };
 
   const incrementQuantity = function() {
-    this.productTotal += initialPrice;
+    this.productTotal += productPrice;
     return this.quantity += 1;
   };
 
   const decrementQuantity = function() {
-    this.productTotal -= initialPrice;
+    this.productTotal -= productPrice;
     return this.quantity -= 1;
   };
 
@@ -37,7 +37,7 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     quantity : 0,
     incrementQuantity,
     decrementQuantity,
-    initialPrice
+    productPrice
   }
 }
 
