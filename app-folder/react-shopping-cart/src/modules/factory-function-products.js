@@ -16,6 +16,11 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     return this.isInCart;
   };
 
+  const setQuantity = function(quant) {
+    this.productTotal = productPrice * quant;
+    return quant;
+  };
+
   const incrementQuantity = function() {
     this.productTotal += productPrice;
     return this.quantity += 1;
@@ -34,10 +39,12 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     imgAlt,
     isInCart,
     isInCartFunction,
-    quantity : 0,
+    quantity : isInCart? 1 : 0,
     incrementQuantity,
     decrementQuantity,
-    productPrice
+    productPrice,
+    setQuantity,
+
   }
 }
 

@@ -68,6 +68,17 @@ const RouteSwitch = () => {
       toShoppingCartHandler();
   };
 
+  function quantityInputHandler(e) {
+    const quant = parseInt(e.target.value);
+    const whichInput = e.target.parentElement.nextSibling.dataset.num;
+
+    productObjects[whichInput].setQuantity(quant);
+
+    console.log(productObjects[whichInput]);
+
+    setProductObjects([...productObjects]);
+  }
+
   
   return (    
    <BrowserRouter>
@@ -76,7 +87,13 @@ const RouteSwitch = () => {
           <Route path='homepage' element={<Homepage />} />
           <Route path='mens' element={<ProductPage productHeading= "Men's" children={productPageChildren[0]} productButtonHandler={productButtonHandler} />} />
           <Route path='womens' element={<ProductPage productHeading= "Women's" children={productPageChildren[1]} productButtonHandler={productButtonHandler} />} />
-          <Route path='shopping-cart' element={<ShoppingCart arrayState={cartProducts} title={cartProducts.length} />} />
+
+          <Route path='shopping-cart' 
+            element={<ShoppingCart 
+            myProductsArray={cartProducts} 
+            quantHandler={quantityInputHandler} 
+            title={cartProducts.length} />} 
+          />
         </Route>
       </Routes>
    </BrowserRouter>);

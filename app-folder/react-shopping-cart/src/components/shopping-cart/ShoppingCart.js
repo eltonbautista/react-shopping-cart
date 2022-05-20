@@ -2,13 +2,24 @@ import React from "react";
 import mapList from "../../modules/map-list";
 
 const ShoppingCart = (props) => {
-  const { arrayState, title, total } = props;
-  const cartProducts = mapList(arrayState);
-  // const cartTotalPrice = cartProducts.props.productTotalPrice <= add all of these up using .reduce or something.
-  const myTotal = arrayState.reduce((prev, curr) => {
-    if (prev === 0) {
-      return prev + arrayState[0].props.productObject.productTotal;
-    }
+  const { myProductsArray, title, quantHandler } = props;
+  // Maps myProductsArray to be a list of components;
+  // const childForProductDiv = <input value={}></input>
+  const thisOne = myProductsArray.forEach((product) => {
+    product.props.productObject.children = 
+    <div>
+      <button>-</button>
+      <input onChange={quantHandler}></input>
+      <button>+</button>
+  </div>
+  });
+  console.log(thisOne);
+  
+  const cartProducts = mapList(myProductsArray, 'inCart');
+
+
+  // Helper function for totaling price of all items in my cart;
+  const myTotal = myProductsArray.reduce((prev, curr) => {
     return prev + curr.props.productObject.productTotal;
   }, 0);
 

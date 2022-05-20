@@ -5,7 +5,6 @@ const mapList = (arrayToMap, category) => {
 
   arrayToMap.map((element) => {
     count += 1;
-
     return (
       <li key={category + count}>
         {element}
