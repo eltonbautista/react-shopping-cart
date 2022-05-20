@@ -33,8 +33,6 @@ const RouteSwitch = () => {
 
 
 
-
-
   const createMyProducts = (supplyArr) => {
     const arrToPushInto = [];
 
@@ -47,17 +45,30 @@ const RouteSwitch = () => {
   const mensProducts = createMyProducts(mensProductObjects);
   const womensProducts = createMyProducts(womensProductObjects);
   
+  const allProductComponents = [...mensProducts, ...womensProducts];
+
   const productPageChildren =
   [<ProductContainer products={mensProducts} />, <ProductContainer products={womensProducts} />, ];
+
+
+  function toShoppingCartHandler() {
+    const filteredCartProductsMen = mensProducts.filter(product => product.props.productObject.isInCart === true);
+    const filteredCartProductsWomen = womensProducts.filter(product => product.props.productObject.isInCart === true);
+
+    setCartProducts([...filteredCartProductsMen, ...filteredCartProductsWomen]);
+    console.log(cartProducts);
+  }
 
 
   function productButtonHandler(e) {
     const makeIterable = [...e.target.parentElement.parentElement.children];
     const myProductDiv = e.target.parentElement;
     const indexOfProduct = makeIterable.indexOf(myProductDiv);
-
+    console.log(indexOfProduct);
     if(myProductDiv.attributes.category.value === 'Men\'s') {
-      mensProductObjects[indexOfProduct].isInCartFunction();
+      const isInCartBool = mensProductObjects[indexOfProduct].isInCartFunction();
+      console.log(isInCartBool);
+
       // mensProductObjects[indexOfProduct].incrementQuantity();
       // THIS IS WHAT WILL BE IN A SEPARATE EVENTHANDLER AND PASSED DOWN TO QUANTITY FACTOR IN SHOPPINGCART COMPONENT + - BUTTONS
       setMensProductObjects([...mensProductObjects]);
@@ -69,11 +80,10 @@ const RouteSwitch = () => {
   };
 
   
-
   return (    
    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App title='Meemo Boutique' />}>
+        <Route path='/' element={<App title='Meemo Boutique' cartEventHandler={toShoppingCartHandler} />}>
           <Route path='homepage' element={<Homepage />} />
           <Route path='mens' element={<ProductPage productHeading= "Men's" children={productPageChildren[0]} productButtonHandler={productButtonHandler} />} />
           <Route path='womens' element={<ProductPage productHeading= "Women's" children={productPageChildren[1]} productButtonHandler={productButtonHandler} />} />

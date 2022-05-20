@@ -3,6 +3,7 @@ import mapList from "../../modules/map-list";
 
 const ShoppingCart = (props) => {
   const { arrayState, title } = props;
+  console.log(arrayState);
   const cartProducts = mapList(arrayState);
   // const cartTotalPrice = cartProducts.props.productTotalPrice <= add all of these up using .reduce or something.
 
@@ -11,7 +12,7 @@ const ShoppingCart = (props) => {
       <h1 className="cart title">My Shopping Cart</h1>
       <h3>{!title ? 'There are no items in your cart...' : 'Your items:'}</h3>
       <div className="cart product-container">
-        {'cart products go here'}
+        {cartProducts}
       </div>
       <div className="cart total-price">
         Total price goes here
