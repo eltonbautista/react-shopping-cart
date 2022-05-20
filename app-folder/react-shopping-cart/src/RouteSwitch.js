@@ -25,8 +25,10 @@ import Product from './components/product-components/Product';
 
 const RouteSwitch = () => {
   // MY STATES
-  const [mensProductObjects, setMensProductObjects] = useState(arrayOfProducts[0]);
-  const [womensProductObjects, setWomensProductObjects] = useState(arrayOfProducts[1]);
+  const myProds = [...arrayOfProducts[0], ...arrayOfProducts[1]];
+  
+  const [mensProductObjects, setMensProductObjects] = useState(myProds);
+  // const [womensProductObjects, setWomensProductObjects] = useState(arrayOfProducts[1]);
 
   const [cartProducts, setCartProducts] = useState([]);
   // const [cartTitle, setCartTitle] = useState(cartProducts.length);
@@ -37,14 +39,16 @@ const RouteSwitch = () => {
     const arrToPushInto = [];
 
     supplyArr.forEach((prod) => {
-      arrToPushInto.push(<Product productObject={prod} onClickHandler={productButtonHandler} />);
+      arrToPushInto.push(<Product productObject={prod} num={myProds.indexOf(prod)} onClickHandler={productButtonHandler} />);
     })
     return arrToPushInto;
   }
 
-  const mensProducts = createMyProducts(mensProductObjects);
-  const womensProducts = createMyProducts(womensProductObjects);
-  
+  const allProducts = createMyProducts(myProds);
+
+  const mensProducts = allProducts.filter(m => m.props.productObject.productCategory === "Men's");
+  const womensProducts = allProducts.filter(w => w.props.productObject.productCategory === "Women's");
+  console.log(allProducts);
   const allProductComponents = [...mensProducts, ...womensProducts];
 
   const productPageChildren =
@@ -52,10 +56,11 @@ const RouteSwitch = () => {
 
 
   function toShoppingCartHandler() {
-    const filteredCartProductsMen = mensProducts.filter(product => product.props.productObject.isInCart === true);
-    const filteredCartProductsWomen = womensProducts.filter(product => product.props.productObject.isInCart === true);
+    // const filteredCartProductsMen = mensProducts.filter(product => product.props.productObject.isInCart === true);
+    // const filteredCartProductsWomen = womensProducts.filter(product => product.props.productObject.isInCart === true);
 
-    setCartProducts([...filteredCartProductsMen, ...filteredCartProductsWomen]);
+    const filteredCartProducts = allProductComponents.filter(product => product.props.productObject.isInCart === true);
+    setCartProducts(filteredCartProducts);
     console.log(cartProducts);
   }
 
@@ -63,18 +68,17 @@ const RouteSwitch = () => {
   function productButtonHandler(e) {
     const makeIterable = [...e.target.parentElement.parentElement.children];
     const myProductDiv = e.target.parentElement;
-    const indexOfProduct = makeIterable.indexOf(myProductDiv);
-    console.log(indexOfProduct);
+
     if(myProductDiv.attributes.category.value === 'Men\'s') {
-      const isInCartBool = mensProductObjects[indexOfProduct].isInCartFunction();
+      const isInCartBool = mensProductObjects[e.target.dataset.num].isInCartFunction();
       console.log(isInCartBool);
 
       // mensProductObjects[indexOfProduct].incrementQuantity();
       // THIS IS WHAT WILL BE IN A SEPARATE EVENTHANDLER AND PASSED DOWN TO QUANTITY FACTOR IN SHOPPINGCART COMPONENT + - BUTTONS
       setMensProductObjects([...mensProductObjects]);
     } else if (myProductDiv.attributes.category.value === 'Women\'s') {
-      womensProductObjects[indexOfProduct].isInCartFunction();
-      setWomensProductObjects([...womensProductObjects]);
+      mensProductObjects[e.target.dataset.num].isInCartFunction();
+      setMensProductObjects([...mensProductObjects]);
     };
 
   };
