@@ -3,20 +3,24 @@ import mapList from "../../modules/map-list";
 
 const ShoppingCart = (props) => {
   const { myProductsArray, title, quantHandler } = props;
-  // Maps myProductsArray to be a list of components;
-  console.log(document.activeElement);
 
+  // Adds a children property to productObject object... Essentially renders a child element for the <Product /> component
   const thisOne = myProductsArray.forEach((product) => {
     product.props.productObject.children = 
     <div className="quantity-input">
-      {/* <button>-</button> */}
       <label>Quantity:{' '}
-      <input data-num-id={product.props.num} onChange={quantHandler} placeholder={product.props.productObject.quantity} min={1} type={'number'}></input>
+      <input 
+        data-num-id={product.props.num} 
+        onChange={quantHandler} 
+        placeholder={product.props.productObject.quantity} 
+        min={1} 
+        type={'number'}>
+      </input>
       </label>
-      {/* <button>+</button> */}
   </div>
   });
-  
+
+    // Maps myProductsArray to be a list of components;
   const cartProducts = mapList(myProductsArray, 'inCart');
 
 

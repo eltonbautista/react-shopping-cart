@@ -91,10 +91,28 @@ const RouteSwitch = () => {
   return (    
    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App title='Meemo Boutique' sexButtonHandler={removeInputs} cartEventHandler={toShoppingCartHandler} />}>
+        <Route 
+        path='/' element=
+        {<App 
+          title='Meemo Boutique' 
+          sexButtonHandler={removeInputs} 
+          cartEventHandler={toShoppingCartHandler} 
+        />}>
           <Route path='homepage' element={<Homepage />} />
-          <Route path='mens' element={<ProductPage productHeading= "Men's" children={productPageChildren[0]} productButtonHandler={productButtonHandler} />} />
-          <Route path='womens' element={<ProductPage productHeading= "Women's" children={productPageChildren[1]} productButtonHandler={productButtonHandler} />} />
+          <Route path='mens' element=
+          {<ProductPage 
+            productHeading= "Men's" 
+            children={productPageChildren[0]} 
+            productButtonHandler={productButtonHandler} 
+            />}
+          />
+          <Route path='womens' element=
+          {<ProductPage 
+            productHeading= "Women's" 
+            children={productPageChildren[1]} 
+            productButtonHandler={productButtonHandler} 
+            />} 
+          />
 
           <Route path='shopping-cart' 
             element={<ShoppingCart 

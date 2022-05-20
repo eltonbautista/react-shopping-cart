@@ -28,6 +28,7 @@ function App({ title, cartEventHandler, sexButtonHandler }) {
         </nav>
 {/* Cart Button will also be a route, clicking it will take the user to a page that shows the purchased items, price, etc. */}
       </header>
+      
       {/* The Outlet component is here because initially,
           if I did not use routing then all of my child components in links would be in that container */}
       <div className='app-child-container'>

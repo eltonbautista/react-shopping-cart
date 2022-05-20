@@ -2,14 +2,16 @@
 import Product from "../components/product-components/Product";
 
 const factoryFunctionProducts = (productName, productCategory, productTotal, imgSrc, imgAlt, isInCart) => {
+  // Make sure price is a number
   const productPrice = parseFloat(productTotal.toFixed(2));
-  let newPrice;
 
+  // Toggles isInCart property to true or false
   const isInCartFunction = function() {
     !this.isInCart ? this.isInCart = true : this.isInCart = false;
     return this.isInCart;
   };
 
+  // Method used for setting quantity state in <RouteSwitch /> if user deletes input then quantity is defaulted to 1
   const setQuantity = function(quant = 1) {
     if (isNaN(quant)) {
       this.productTotal = productPrice;
@@ -20,6 +22,7 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     return this.quantity = quant;
   };
 
+  // Both of these methods are currently unnecessary since [input type='number'] does their job
   const incrementQuantity = function() {
     this.productTotal += productPrice;
     return this.quantity = this.quantity += 1;
