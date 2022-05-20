@@ -35,7 +35,7 @@ const RouteSwitch = () => {
     const arrToPushInto = [];
 
     supplyArr.forEach((prod) => {
-      arrToPushInto.push(<Product productObject={prod} num={myProducts.indexOf(prod)} onClickHandler={productButtonHandler} />);
+      arrToPushInto.push(<Product productObject={prod} num={myProducts.indexOf(prod)} onChange={quantityInputHandler} onClickHandler={productButtonHandler} />);
     })
     return arrToPushInto;
   }
@@ -56,12 +56,21 @@ const RouteSwitch = () => {
     setCartProducts(filteredCartProducts);
   }
 
+  function removeInputs() {
+    productObjects.forEach((product) => {
+      delete product.children;
+    });
+    setProductObjects([...productObjects]);
+  }
 
   function productButtonHandler(e) {
     const buttonNumber = e.target.dataset.num;
 
-    productObjects[buttonNumber].isInCartFunction();
-
+    const inCartBool = productObjects[buttonNumber].isInCartFunction();
+      if (!inCartBool) {
+        productObjects[buttonNumber].setQuantity(1);
+        delete productObjects[buttonNumber].children;
+      }
       // productObjects[indexOfProduct].incrementQuantity();
       // THIS IS WHAT WILL BE IN A SEPARATE EVENTHANDLER AND PASSED DOWN TO QUANTITY FACTOR IN SHOPPINGCART COMPONENT + - BUTTONS
       setProductObjects([...productObjects]);
@@ -70,11 +79,10 @@ const RouteSwitch = () => {
 
   function quantityInputHandler(e) {
     const quant = parseInt(e.target.value);
-    const whichInput = e.target.parentElement.nextSibling.dataset.num;
+    const inputNum = e.target.dataset.numId;
+    console.log(inputNum);
 
-    productObjects[whichInput].setQuantity(quant);
-
-    console.log(productObjects[whichInput]);
+    productObjects[inputNum].setQuantity(quant);
 
     setProductObjects([...productObjects]);
   }
@@ -83,7 +91,7 @@ const RouteSwitch = () => {
   return (    
    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App title='Meemo Boutique' cartEventHandler={toShoppingCartHandler} />}>
+        <Route path='/' element={<App title='Meemo Boutique' sexButtonHandler={removeInputs} cartEventHandler={toShoppingCartHandler} />}>
           <Route path='homepage' element={<Homepage />} />
           <Route path='mens' element={<ProductPage productHeading= "Men's" children={productPageChildren[0]} productButtonHandler={productButtonHandler} />} />
           <Route path='womens' element={<ProductPage productHeading= "Women's" children={productPageChildren[1]} productButtonHandler={productButtonHandler} />} />

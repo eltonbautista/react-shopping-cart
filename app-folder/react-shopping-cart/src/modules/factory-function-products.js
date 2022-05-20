@@ -4,31 +4,30 @@ import Product from "../components/product-components/Product";
 const factoryFunctionProducts = (productName, productCategory, productTotal, imgSrc, imgAlt, isInCart) => {
   const productPrice = parseFloat(productTotal.toFixed(2));
   let newPrice;
+
   const isInCartFunction = function() {
     !this.isInCart ? this.isInCart = true : this.isInCart = false;
-
-    // if(this.isInCart === false) {
-    //   this.isInCart = true;
-    // } else if (this.isInCart === true) {
-    //   this.isInCart = false;
-    // }
-
     return this.isInCart;
   };
 
-  const setQuantity = function(quant) {
+  const setQuantity = function(quant = 1) {
+    if (isNaN(quant)) {
+      this.productTotal = productPrice;
+      return this.quantity = 1;
+    };
+
     this.productTotal = productPrice * quant;
-    return quant;
+    return this.quantity = quant;
   };
 
   const incrementQuantity = function() {
     this.productTotal += productPrice;
-    return this.quantity += 1;
+    return this.quantity = this.quantity += 1;
   };
 
   const decrementQuantity = function() {
     this.productTotal -= productPrice;
-    return this.quantity -= 1;
+    return this.quantity = this.quantity -= 1;
   };
 
   return {
@@ -39,7 +38,7 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     imgAlt,
     isInCart,
     isInCartFunction,
-    quantity : isInCart? 1 : 0,
+    quantity: 1,
     incrementQuantity,
     decrementQuantity,
     productPrice,

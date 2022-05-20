@@ -1,7 +1,7 @@
 import './App.css';
 import { Link, Outlet } from 'react-router-dom';
 
-function App({ title, cartEventHandler }) {
+function App({ title, cartEventHandler, sexButtonHandler }) {
   // Since my app is using routing, my cart needs to be in a non-changing place(?) i.e. nav bar.
 
   return (
@@ -15,11 +15,11 @@ function App({ title, cartEventHandler }) {
           </Link>
 
           <Link to='mens' > 
-            <button data-testid='mens' type='button'>Men's</button> 
+            <button onClick={sexButtonHandler} data-testid='mens' type='button'>Men's</button> 
           </Link> {' '}
 
           <Link to='womens' > 
-            <button data-testid='womens' type='button'>Women's</button> 
+            <button onClick={sexButtonHandler} data-testid='womens' type='button'>Women's</button> 
           </Link>{' '}
 
           <Link to='shopping-cart'>
