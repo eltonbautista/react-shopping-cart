@@ -25,30 +25,25 @@ import Product from './components/product-components/Product';
 
 const RouteSwitch = () => {
   // MY STATES
-  const myProds = [...arrayOfProducts[0], ...arrayOfProducts[1]];
+  const myProducts = [...arrayOfProducts[0], ...arrayOfProducts[1]];
   
-  const [mensProductObjects, setMensProductObjects] = useState(myProds);
-  // const [womensProductObjects, setWomensProductObjects] = useState(arrayOfProducts[1]);
+  const [productObjects, setProductObjects] = useState(myProducts);
 
   const [cartProducts, setCartProducts] = useState([]);
-  // const [cartTitle, setCartTitle] = useState(cartProducts.length);
-
-
 
   const createMyProducts = (supplyArr) => {
     const arrToPushInto = [];
 
     supplyArr.forEach((prod) => {
-      arrToPushInto.push(<Product productObject={prod} num={myProds.indexOf(prod)} onClickHandler={productButtonHandler} />);
+      arrToPushInto.push(<Product productObject={prod} num={myProducts.indexOf(prod)} onClickHandler={productButtonHandler} />);
     })
     return arrToPushInto;
   }
 
-  const allProducts = createMyProducts(myProds);
+  const allProducts = createMyProducts(myProducts);
 
   const mensProducts = allProducts.filter(m => m.props.productObject.productCategory === "Men's");
   const womensProducts = allProducts.filter(w => w.props.productObject.productCategory === "Women's");
-  console.log(allProducts);
   const allProductComponents = [...mensProducts, ...womensProducts];
 
   const productPageChildren =
@@ -56,31 +51,21 @@ const RouteSwitch = () => {
 
 
   function toShoppingCartHandler() {
-    // const filteredCartProductsMen = mensProducts.filter(product => product.props.productObject.isInCart === true);
-    // const filteredCartProductsWomen = womensProducts.filter(product => product.props.productObject.isInCart === true);
-
     const filteredCartProducts = allProductComponents.filter(product => product.props.productObject.isInCart === true);
+
     setCartProducts(filteredCartProducts);
-    console.log(cartProducts);
   }
 
 
   function productButtonHandler(e) {
-    const makeIterable = [...e.target.parentElement.parentElement.children];
-    const myProductDiv = e.target.parentElement;
+    const buttonNumber = e.target.dataset.num;
 
-    if(myProductDiv.attributes.category.value === 'Men\'s') {
-      const isInCartBool = mensProductObjects[e.target.dataset.num].isInCartFunction();
-      console.log(isInCartBool);
+    productObjects[buttonNumber].isInCartFunction();
 
-      // mensProductObjects[indexOfProduct].incrementQuantity();
+      // productObjects[indexOfProduct].incrementQuantity();
       // THIS IS WHAT WILL BE IN A SEPARATE EVENTHANDLER AND PASSED DOWN TO QUANTITY FACTOR IN SHOPPINGCART COMPONENT + - BUTTONS
-      setMensProductObjects([...mensProductObjects]);
-    } else if (myProductDiv.attributes.category.value === 'Women\'s') {
-      mensProductObjects[e.target.dataset.num].isInCartFunction();
-      setMensProductObjects([...mensProductObjects]);
-    };
-
+      setProductObjects([...productObjects]);
+      toShoppingCartHandler();
   };
 
   
