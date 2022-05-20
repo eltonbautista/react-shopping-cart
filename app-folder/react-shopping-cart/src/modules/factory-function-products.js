@@ -1,41 +1,43 @@
 // A factory function responsible for creating my product objects.
 import Product from "../components/product-components/Product";
 
-const factoryFunctionProducts = (productName, productCategory, productPrice, imgSrc, imgAlt, isInCart) => {
-  const initialPrice = parseFloat(productPrice);
+const factoryFunctionProducts = (productName, productCategory, productTotal, imgSrc, imgAlt, isInCart) => {
+  const initialPrice = parseFloat(productTotal.toFixed(2));
   let newPrice;
-
   const isInCartFunction = function() {
-    if(this.isInCart === false) {
-      this.isInCart = true;
-    } else if (this.isInCart === true) {
-      this.isInCart = false;
-    }
+    !this.isInCart ? this.isInCart = true : this.isInCart = false;
+
+    // if(this.isInCart === false) {
+    //   this.isInCart = true;
+    // } else if (this.isInCart === true) {
+    //   this.isInCart = false;
+    // }
 
     return this.isInCart;
   };
 
   const incrementQuantity = function() {
-    this.productPrice += initialPrice;
+    this.productTotal += initialPrice;
     return this.quantity += 1;
   };
 
   const decrementQuantity = function() {
-    this.productPrice -= initialPrice;
+    this.productTotal -= initialPrice;
     return this.quantity -= 1;
   };
 
   return {
     productName,
     productCategory,
-    productPrice,
+    productTotal,
     imgSrc,
     imgAlt,
     isInCart,
     isInCartFunction,
     quantity : 0,
     incrementQuantity,
-    decrementQuantity
+    decrementQuantity,
+    initialPrice
   }
 }
 

@@ -3,12 +3,9 @@ import { getByTestId, render, screen, } from "@testing-library/react";
 import "@testing-library/jest-dom";  // optional
 import userEvent from "@testing-library/user-event";
 
-import ProductPage from "../../components/product-components/ProductPage";
 import ProductContainer from "../../components/product-components/ProductContainer";
 import Product from "../../components/product-components/Product";
-import factoryFunctionProducts from "../../modules/factory-function-products";
 import { arrayOfProducts } from "../../modules/factory-function-products";
-import RouteSwitch from "../../RouteSwitch";
 
 describe('Tests for Product Components', () => {
   const product = arrayOfProducts[0][0];
