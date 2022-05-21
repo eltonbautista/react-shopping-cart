@@ -80,7 +80,6 @@ const RouteSwitch = () => {
   function quantityInputHandler(e) {
     const quant = parseInt(e.target.value);
     const inputNum = e.target.dataset.numId;
-    console.log(inputNum);
 
     productObjects[inputNum].setQuantity(quant);
 
@@ -118,7 +117,7 @@ const RouteSwitch = () => {
             element={<ShoppingCart 
             myProductsArray={cartProducts} 
             quantHandler={quantityInputHandler} 
-            title={cartProducts.length} />} 
+            items={cartProducts.length} />} 
           />
         </Route>
       </Routes>

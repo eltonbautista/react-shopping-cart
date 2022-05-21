@@ -12,7 +12,7 @@ function App({ title, cartEventHandler, sexButtonHandler }) {
           {/* Link component can only go in <nav> */}
           <Link to='homepage'> 
             <button>Home</button> 
-          </Link>
+          </Link> {' '}
 
           <Link to='mens' > 
             <button onClick={sexButtonHandler} data-testid='mens' type='button'>Men's</button> 
@@ -20,7 +20,7 @@ function App({ title, cartEventHandler, sexButtonHandler }) {
 
           <Link to='womens' > 
             <button onClick={sexButtonHandler} data-testid='womens' type='button'>Women's</button> 
-          </Link>{' '}
+          </Link> {' '}
 
           <Link to='shopping-cart'>
             <button onClick={cartEventHandler} data-testid='shopping-cart-page' id="cart-button">Cart</button>
