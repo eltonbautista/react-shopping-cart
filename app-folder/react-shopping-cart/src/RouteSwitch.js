@@ -66,7 +66,7 @@ const RouteSwitch = () => {
   function productButtonHandler(e) {
     const buttonNumber = e.target.dataset.num;
 
-    const inCartBool = productObjects[buttonNumber].isInCartFunction();
+    productObjects[buttonNumber].isInCartFunction();
     productObjects[buttonNumber].setQuantity(1);
       
       // productObjects[indexOfProduct].incrementQuantity();
@@ -92,8 +92,9 @@ const RouteSwitch = () => {
         path='/' element=
         {<App 
           title='Meemo Boutique' 
-          sexButtonHandler={removeInputs} 
-          cartEventHandler={toShoppingCartHandler} 
+          // sexButtonHandler={removeInputs} 
+          cartEventHandler={toShoppingCartHandler}
+          cartLength={cartProducts.length}
         />}>
           <Route path='homepage' element={<Homepage />} />
           <Route path='mens' element=

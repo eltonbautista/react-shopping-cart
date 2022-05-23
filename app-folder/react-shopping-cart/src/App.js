@@ -1,7 +1,7 @@
 import './App.css';
 import { Link, Outlet } from 'react-router-dom';
 
-function App({ title, cartEventHandler, sexButtonHandler }) {
+function App({ title, cartEventHandler, cartLength }) {
   // Since my app is using routing, my cart needs to be in a non-changing place(?) i.e. nav bar.
 
   return (
@@ -15,15 +15,15 @@ function App({ title, cartEventHandler, sexButtonHandler }) {
           </Link> {' '}
 
           <Link to='mens' > 
-            <button onClick={sexButtonHandler} data-testid='mens' type='button'>Men's</button> 
+            <button data-testid='mens' type='button'>Men's</button> 
           </Link> {' '}
 
           <Link to='womens' > 
-            <button onClick={sexButtonHandler} data-testid='womens' type='button'>Women's</button> 
+            <button data-testid='womens' type='button'>Women's</button> 
           </Link> {' '}
 
           <Link to='shopping-cart'>
-            <button onClick={cartEventHandler} data-testid='shopping-cart-page' id="cart-button">Cart</button>
+            <button onClick={cartEventHandler} data-testid='shopping-cart-page' id="cart-button">Cart {cartLength}</button>
           </Link> 
         </nav>
 {/* Cart Button will also be a route, clicking it will take the user to a page that shows the purchased items, price, etc. */}
