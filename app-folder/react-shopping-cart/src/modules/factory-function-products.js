@@ -14,7 +14,7 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
   // Method used for setting quantity state in <RouteSwitch /> if user deletes input then quantity is defaulted to 1
   const setQuantity = function(quant = 1) {
     if (isNaN(quant)) {
-      this.productTotal = productPrice;
+      this.productTotal = 0;
       return this.quantity = '';
     };
 

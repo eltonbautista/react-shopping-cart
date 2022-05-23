@@ -67,10 +67,8 @@ const RouteSwitch = () => {
     const buttonNumber = e.target.dataset.num;
 
     const inCartBool = productObjects[buttonNumber].isInCartFunction();
-      if (!inCartBool) {
-        productObjects[buttonNumber].setQuantity(1);
-        delete productObjects[buttonNumber].children;
-      }
+    productObjects[buttonNumber].setQuantity(1);
+      
       // productObjects[indexOfProduct].incrementQuantity();
       // THIS IS WHAT WILL BE IN A SEPARATE EVENTHANDLER AND PASSED DOWN TO QUANTITY FACTOR IN SHOPPINGCART COMPONENT + - BUTTONS
       setProductObjects([...productObjects]);
