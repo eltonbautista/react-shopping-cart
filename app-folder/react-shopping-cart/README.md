@@ -1,3 +1,9 @@
+Assets used: 
+Cart Icon: https://www.svgrepo.com/svg/114559/shopping-bag
+Product images from: https://burst.shopify.com/
+OstrichSans Font: https://www.theleagueofmoveabletype.com/ostrich-sans
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
