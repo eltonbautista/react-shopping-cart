@@ -26,29 +26,7 @@ const ShoppingCart = (props) => {
   
 
     // Maps myProductsArray to be a list of components;
-  // const cartProducts = mapList(myProductsArray, 'inCart', 1);
-
-  const cartProducts = myProductsArray.map((product) => {
-    return (
-      <li key={myProductsArray.indexOf(product)}>
-        {product}
-        {<div className="quantity-input-div">
-        <label>Quantity:{' '}
-        <input
-          className="quantity-input" 
-          data-num-id={product.props.num} 
-          onChange={quantHandler} 
-          placeholder={product.props.productObject.quantity}
-          value={product.props.productObject.quantity}
-          min={1} 
-          type={'number'}>
-        </input>
-        </label>
-    </div>}
-      </li>
-    )
-  })
-
+  const cartProducts = mapList(myProductsArray, 'inCart', 1);
 
   // Helper function for totaling price of all items in my cart;
   const myTotal = myProductsArray.reduce((prev, curr) => {

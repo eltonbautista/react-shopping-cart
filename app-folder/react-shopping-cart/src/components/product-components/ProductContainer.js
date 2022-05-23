@@ -5,7 +5,7 @@ import noSpacesOrSingleQuotes from "../../modules/no-spaces-or-single-quotes";
 // A function component which is responsible for containing my products/cards.
 const ProductContainer = (props) => {
   const { products, } = props;
-  const myProducts = mapList(products);
+  const myProducts = mapList(products, 'proddy');
 
   const divClassSex = noSpacesOrSingleQuotes(products[0].props.productObject.productCategory)
 
