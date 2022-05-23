@@ -15,11 +15,12 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
   const setQuantity = function(quant = 1) {
     if (isNaN(quant)) {
       this.productTotal = productPrice;
-      return this.quantity = 1;
+      return this.quantity = '';
     };
 
     this.productTotal = productPrice * quant;
-    return this.quantity = quant;
+    this.quantity = quant;
+    return quant;
   };
 
   // Both of these methods are currently unnecessary since [input type='number'] does their job
@@ -41,7 +42,7 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     imgAlt,
     isInCart,
     isInCartFunction,
-    quantity: 1,
+    quantity: '',
     incrementQuantity,
     decrementQuantity,
     productPrice,
