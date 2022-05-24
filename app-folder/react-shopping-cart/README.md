@@ -4,6 +4,9 @@ Product images from: https://burst.shopify.com/
 OstrichSans Font: https://www.theleagueofmoveabletype.com/ostrich-sans
 Picture of store by Qin Fan: https://unsplash.com/photos/KfqgYzoH3Vk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
 Picture of lady sitting by Chris Yang: https://unsplash.com/photos/Yeqs88nM4_E?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+Picture of Lights by Brian Suh: https://unsplash.com/photos/a4GET0s82rI
+Picture of Come As You Are by Claudia Schmalz: https://www.pexels.com/photo/hanger-and-shopping-bag-in-wardrobe-5894845/
+"Vintage Clothing" by Kei Scampa: https://www.pexels.com/photo/neon-sign-in-shop-with-vintage-clothes-2964779/
 
 # Getting Started with Create React App
 

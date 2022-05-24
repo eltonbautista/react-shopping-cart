@@ -7,6 +7,7 @@
 }
 * {
   color: wheat;
+  font-weight: 900;
   margin: 0;
   font-family: palanquin;
 }
@@ -42,6 +43,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* APP STYLING */
+
+
 header {
   display: grid;
   justify-items: center;

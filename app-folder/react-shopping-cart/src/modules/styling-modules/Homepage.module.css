@@ -6,40 +6,82 @@
   font-family: ostrichSans;
   src: url('../../assets/fonts/ostrich-sans-master/OstrichSans-Medium.otf');
 }
-
-.about-info {
-  display: grid;
-  justify-items: center;
-}
-
-.descriptionHeader {
-  font-size: 36px;
-  letter-spacing: 0.5vh;
-  font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.description {
-  font-family: palanquin, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 50%;
-  letter-spacing: 0.1vh;
-  font-size: 2vh;
-  justify-self: center;
-}
+/* HOMEPAGE */
 
 .homepageDiv, .extra-info {
   color: white;
   display: grid;
 }
 
-.store-image-div {
-  width: 100vw;
-  height: 300px;
+.homepageDiv {
+  background-image: url('../../assets/images/design/lightOne.jpg');
+  background-size:contain;
+  background-attachment: fixed;
+  min-height: 100vh;
+  /* min-width: 100vw; */
+  box-shadow: 0 0 15px inset red, 0 0 15px blue;
+}
+
+/* ABOUT */
+
+.about-info {
+  display: grid;
+  justify-items: center;
   border: 1px solid wheat;
-  background-image: url('../../assets/images/design/picture-of-store.jpg');
+  width: 50%;
+  justify-self: center;
+  margin: 10px 0 10px 0
+}
+
+.description-one-header, .description-two-header {
+  font-size: 36px;
+  letter-spacing: 0.5vh;
+  font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.description-one {
+  padding: 10px;
+  font-family: palanquin, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.1vh;
+  font-size: 2vh;
+  justify-self: center;
+}
+
+/* EXTRA INFO DIV */
+.extra-info {
+  border: 1px solid wheat;
+  width: 53%;
+  margin: 5px 0 5px 2vw;
+  justify-self: start;
+  /* margin-left: 50px; */
+}
+
+.description-two-header {
+  padding-left: 1vw;
+}
+
+.description-two {
+  font-family: palanquin, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.1vh;
+  font-size: 2vh;
+  justify-self: start;
+  padding-left: 1vw;
+}
+
+/* IMAGES */
+
+.store-image-div {
+  width: 99vw;
+  justify-self: center;
+  height: 40vh;
+  box-shadow: 0 0 30px inset rgb(255, 70, 8);
+  background-image: url('../../assets/images/design/vintage.jpg');
+  background-color: black;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: .8;
+  opacity: 1;
+  z-index: 1;
 }
 
 .homepageImage {
@@ -47,14 +89,17 @@
 }
 
 .lady-sitting-image-div {
-  justify-self: center;
-  width: 50vw;
-  height: 200px;
-  border-radius: 25px;
-  background-image: url('../../assets/images/design/lady-sitting.jpg');
+  justify-self: end;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/images/design/cayr.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: -100px -150px;
+  padding-bottom: 100px;
   background-attachment: fixed;
-  /* padding-top: -100px; */
-  opacity: .8;
+  opacity: 1;
+  position: relative;
+  /* top: 130vh; */
+  /* border-radius: 10px; */
+  box-shadow: 0 0 15px inset red, 0 0 15px blue;
 }

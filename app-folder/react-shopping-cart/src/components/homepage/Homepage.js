@@ -19,13 +19,13 @@ const Homepage = (props) => {
   return (
     <div id="homepage" data-testid='homepage' className={styles.homepageDiv}>
       <div className={`homepage ${styles['about-info']}`}>
-        <h1 className={styles.descriptionHeader}>{fillInformation.descriptionHeader}</h1>
-        <p className={styles.description}>{fillInformation.description}</p>
+        <h1 className={styles['description-one-header']}>{fillInformation.descriptionHeader}</h1>
+        <p className={styles['description-one']}>{fillInformation.description}</p>
       </div>
       <ImgInDiv imgStyling={styles.homepageImage} stylingClass={styles['store-image-div']} src={fillInformation.imgOneSrc} alt={fillInformation.imgOneAlt} />
       <div className={`homepage ${styles['extra-info']}`}>
-        <h3 className={styles.description}>{fillInformation.extraInfoHeading}</h3>
-        <p className={styles.description}>
+        <h3 className={styles['description-two-header']}>{fillInformation.extraInfoHeading}</h3>
+        <p className={styles['description-two']}>
           {fillInformation.description}
         </p>
       </div>
