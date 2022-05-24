@@ -14,6 +14,7 @@ const Homepage = (props) => {
     imgTwoAlt: '',
     extraInfoHeading: 'Extra Information Heading',
     extraInfo: '',
+    moreInfo: '" The spirit is willing but the flesh is weak. "'
   }
 
   return (
@@ -30,7 +31,11 @@ const Homepage = (props) => {
         </p>
       </div>
       <ImgInDiv src={fillInformation.imgTwoSrc} stylingClass={styles['lady-sitting-image-div']} alt={fillInformation.imgTwoAlt} />
-
+      <div className={styles['description-three-div']}>
+        <h2>
+          {fillInformation.moreInfo}
+        </h2>
+      </div>
     </div>
   );
 };
