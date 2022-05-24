@@ -35,7 +35,12 @@ const Homepage = (props) => {
         <h2>
           {fillInformation.moreInfo}
         </h2>
+        <div>Transitioning pictures of product</div>
+        <div className={styles['footer-div']}>
+        Footer
+        </div>
       </div>
+
     </div>
   );
 };

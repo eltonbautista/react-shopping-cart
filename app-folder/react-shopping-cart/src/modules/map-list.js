@@ -1,10 +1,12 @@
+import styles from '../modules/styling-modules/Products.module.css';
+
 const mapList = (arrayToMap, category, bool) => {
   let count = 0;
 
   return arrayToMap.map((product) => {
     count += 1;
     return (
-      <li key={category + arrayToMap.indexOf(product)}>
+      <li className={styles['product-list']} key={category + arrayToMap.indexOf(product)}>
         {product}
 
         {bool ? 

@@ -44,13 +44,19 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* APP STYLING */
 
-
+#app > div {
+  padding-top: 15vh;
+}
 header {
   display: grid;
   justify-items: center;
-  gap: 2vh;
+  gap: 1vh;
   background-color: rgb(0, 0, 0);
   padding-top: 0.4vh;
+  position: fixed;
+  width: 100vw;
+  /* margin-bottom: 10vh; */
+  z-index: 5;
 }
 header > a {
   text-decoration: none;
@@ -64,12 +70,19 @@ header > a > h1 {
   text-shadow: -3px 3px 1px red, -6px 6px 1px blue;
   border: .1vh solid wheat;
   padding-left: 2.2vh;
+  background: black;
+  /* z-index: 5; */
 }
 
 #nav-bar {
   display: grid;
-  gap: 7vw;
+  /* gap: 7vw; */
+  width: 40%;
   grid-auto-flow: column;
+  background-color: black;
+  box-shadow: -1px 1px 5px white, -3px 3px 5px white, 1px -1px 1px white, 3px -3px 2px white;
+  padding: 5px;
+  justify-content: space-around;
 }
 
 #nav-bar > a > button {
@@ -83,6 +96,9 @@ header > a > h1 {
 	cursor: pointer;
 	outline: inherit;
   font-weight: 600;
+}
+#nav-bar > a > button > div {
+  align-self: end;
 }
 
 #nav-bar > a {
@@ -100,7 +116,7 @@ header > a > h1 {
   color: red;
 }
 
-.quantity-input::-webkit-input-placeholder {
+/* .quantity-input::-webkit-input-placeholder {
     font-weight: lighter;
     color:#AFB2B3;
 }
@@ -111,4 +127,4 @@ header > a > h1 {
 .quantity-input::-ms-input-placeholder {
     font-weight: lighter;
     color:#AFB2B3;
-}
+} */
