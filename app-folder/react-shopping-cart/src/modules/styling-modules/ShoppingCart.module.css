@@ -1,0 +1,69 @@
+.page {
+    display: grid;
+    justify-content: center;
+}
+
+.page > h1, .page > h3 {
+    font-family: ostrichSans;
+    letter-spacing: 8px;
+}
+
+.page > h1 {
+    font-size: 6vh;
+    text-align: center;
+    box-shadow: 5px -5px 10px rgb(217, 164, 164), -5px 5px 10px rgb(217, 164, 164);
+    border-radius: 10px;
+    margin-top: 1vh;
+}
+
+.page > h3 {
+    font-size: 3vh;
+    margin-bottom: 1.5vh;
+}
+
+.cart-input-div {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+    height: 50%;
+}
+
+.cart-input-div input {
+    height: 85%;
+    padding: 0;
+    color: black;
+    font-weight: 900;
+    font-size: 2vh;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.product-list {
+    display: grid;
+}
+
+.product-list label{
+    display: grid;
+    /* grid-auto-flow: column; */
+    align-items: center;
+    align-content: center;
+    font-family: ostrichSans;
+    letter-spacing: 5px;
+}
+
+.cart-ul {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* grid-auto-flow: column; */
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows:max-content; */
+    gap: 3vw;
+}
+
+.cart-total {
+    font-family: ostrichSans;
+    font-size: 2.5vh;
+    letter-spacing: 5px;
+}

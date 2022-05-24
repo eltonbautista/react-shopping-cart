@@ -1,4 +1,4 @@
-import styles from '../modules/styling-modules/Products.module.css';
+import styles from '../modules/styling-modules/ShoppingCart.module.css';
 
 const mapList = (arrayToMap, category, bool) => {
   let count = 0;
@@ -10,10 +10,10 @@ const mapList = (arrayToMap, category, bool) => {
         {product}
 
         {bool ? 
-        <div className="quantity-input-div">
+        <div className={styles['cart-input-div']}>
           <label>Quantity:{' '}
           <input
-          className="quantity-input" 
+          className={"quantity-input"} 
           data-num-id={product.props.num} 
           onChange={product.props.onChange} 
           placeholder={product.props.productObject.quantity}
