@@ -43,9 +43,6 @@ function App({ title, cartEventHandler, cartLength }) {
         <Outlet />
       </div>
 
-      <footer>
-
-      </footer>
     </div>
   );
 }

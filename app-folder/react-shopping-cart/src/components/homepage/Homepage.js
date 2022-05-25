@@ -37,7 +37,32 @@ const Homepage = (props) => {
         </h2>
         <div>Transitioning pictures of product</div>
         <div className={styles['footer-div']}>
-        Footer
+          <div className={styles['links-div']}>
+            <h3>Creator</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/eltonbautista" target="_blank" 
+                   rel="noopener noreferrer">Github</a>
+                </li>
+              <li>
+                <a href="https://twitter.com/psychtotech" target="_blank" 
+                   rel="noopener noreferrer">Twitter</a>
+                </li>
+              <li>
+                <a href="https://www.linkedin.com/in/elton-bautista-496a011ab/" target="_blank" 
+                   rel="noopener noreferrer">LinkedIn</a>
+                </li>
+            </ul>
+          </div>
+
+          <div className={styles['links-div']}>
+            <h3>Company</h3>
+            <ul>
+              <li><button></button></li>
+              <li><button></button></li>
+            </ul>
+          </div>
+
         </div>
       </div>
 

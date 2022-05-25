@@ -1,11 +1,16 @@
 .page {
     display: grid;
     justify-content: center;
+    min-height: 80vh;
+    /* grid-template-rows: repeat(5, 1fr); */
+    margin-top: 5vh;
 }
 
 .page > h1, .page > h3 {
     font-family: ostrichSans;
     letter-spacing: 8px;
+    width: 50vw;
+    justify-self: center;
 }
 
 .page > h1 {
@@ -14,6 +19,7 @@
     box-shadow: 5px -5px 10px rgb(217, 164, 164), -5px 5px 10px rgb(217, 164, 164);
     border-radius: 10px;
     margin-top: 1vh;
+    margin-bottom: 2vh;
 }
 
 .page > h3 {
@@ -54,16 +60,20 @@
 
 .cart-ul {
     padding: 0;
+    padding-top: 1vh;
     margin: 0;
     display: grid;
-    /* grid-auto-flow: column; */
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows:max-content; */
-    gap: 3vw;
+    width: 50%;
+    justify-self: center;
 }
 
 .cart-total {
-    font-family: ostrichSans;
+    font-family: ostrichSansBold;
     font-size: 2.5vh;
     letter-spacing: 5px;
+    justify-self: center;
+    display: grid;
+    align-content: center;
+    height: fit-content;
 }

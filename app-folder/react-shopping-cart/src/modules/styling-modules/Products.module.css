@@ -1,31 +1,84 @@
+/* PRODUCT PAGE */
+
+/* PRODUCT PAGE CONTAINER */
+
+.product-page-container {
+  display: grid;
+  /* min-height: 110%; */
+}
+
+.product-page-men {
+  background-image: url('../../assets/images/design/letters-lighting.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.product-page-women {
+  background-image: url('../../assets/images/design/fireflies.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* z-index: 2; */
+}
+
+/* .product-page-men > div:first-of-type  {
+  background-color: rgba(0, 0, 0, 0.883);
+}
+
+.product-page-women > div:first-of-type {
+  background-color: rgba(0, 0, 0, 0.883);
+} */
+
+.product-page-ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, 1fr);
+  text-decoration: none;
+  justify-items: center;
+  gap: 2vw;
+  padding: 0;
+  width: 60%;
+  justify-self: center;
+}
+
+.product-page-first-div {
+  display: grid;
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.883);
+  margin-bottom: 3vh;
+  width: 100%;
+  height: 100%;
+}
+
+.product-page-first-div > h1 {
+  font-family: ostrichSans;
+  letter-spacing: 8px;
+  font-size: 6vh;
+  text-transform: uppercase;
+}
+
+/* PRODUCTS */
+
 .product-div {
-    display: grid;
-    justify-items: center;
-    font-family: ostrichSans;
+  display: grid;
+  justify-items: center;
+  font-family: ostrichSans;
 }
 
 .product-div > p, .product-div > span {
     justify-self: center;
-    font-family: ostrichSans;
+    font-family: ostrichSansBold;
     font-weight: 900;
     letter-spacing: 5px;
+    margin-top: 1vh;
 }
 
 .product-image-div {
-    width: 15vw;
-    height: 40vh;
+    width: 10vw;
+    height: 30vh;
     box-shadow: -6px 6px 5px red, -3px 3px 5px red, 6px -6px 5px blue, 3px -3px 5px blue;
-    margin-bottom: 1vh;
-}
-
-.product-page-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(3, 1fr);
-    text-decoration: none;
-    justify-items: center;
-    gap: 2vw;
-    /* padding: 0; */
+    /* margin-bottom: 1vh; */
 }
 
 .product-image {
@@ -48,20 +101,6 @@
     font-size: 2vh;
 }
 
-.product-page-first-div {
-    display: grid;
-    justify-items: center;
-    background-color: rgb(255, 30, 0);
-    margin-bottom: 3vh;
-    width: 100%;
-    height: 100%;
-}
-
-.product-page-first-div > h1 {
-    font-family: ostrichSans;
-    letter-spacing: 10px;
-    font-size: 5vh;
-}
 
 .product-button,
 .product-button:after {
@@ -81,6 +120,7 @@
   touch-action: manipulation;
   z-index: 0;
   margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .product-button:after {

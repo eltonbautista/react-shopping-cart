@@ -12,8 +12,8 @@ const ProductContainer = (props) => {
   const divClassSex = noSpacesOrSingleQuotes(products[0].props.productObject.productCategory)
   // old class for div : `product-page product-container ${divClassSex}`
   return (
-    <div className={`product-page product-container ${divClassSex}`}  data-testid='product-container'>
-      <ul className={styles['product-page-container']}>
+    <div className={styles['product-page-container']}  data-testid='product-container'>
+      <ul className={styles['product-page-ul']}>
         {myProducts}
       </ul>
     </div>

@@ -106,7 +106,7 @@
 
 .description-three-div {
   position: absolute;
-  bottom: -200px;
+  bottom: -300px;
   border: 1px solid wheat;
   width: 100%;
   /* margin: 5px 0 5px 0; */
@@ -115,7 +115,15 @@
   /* animation: slidein 7s infinite; */
 }
 
+
+.links-div > ul {
+  display: grid;
+  padding: none;
+  margin: none;  
+}
+
 /* FOOTER */
 .footer-div {
   display: grid;
 }
+

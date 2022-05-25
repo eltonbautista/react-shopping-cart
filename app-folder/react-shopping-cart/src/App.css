@@ -37,16 +37,24 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: ostrichSans;
   src: url('./assets/fonts/ostrich-sans-master/OstrichSans-Light.otf');
 }
+
 @font-face {
   font-family: palanquin;
   src: url('./assets/fonts/palanquin-light.ttf');
+}
+
+@font-face {
+  font-family: ostrichSansBold;
+  src: url('./assets/fonts/ostrich-sans-master/OstrichSans-Heavy.otf');
 }
 
 /* APP STYLING */
 
 #app > div {
   padding-top: 15vh;
+  /* height: 100vh; */
 }
+
 header {
   display: grid;
   justify-items: center;
@@ -116,15 +124,26 @@ header > a > h1 {
   color: red;
 }
 
-/* .quantity-input::-webkit-input-placeholder {
-    font-weight: lighter;
-    color:#AFB2B3;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(38, 25, 39);
+  height: 5.2vh;
+  border: 1px solid red;
+  min-width: 100vw;
+  /* opacity: 0.3; */
+  align-self: flex-end;
 }
-.quantity-input::-moz-placeholder {
-    font-weight: lighter;
-    color:#AFB2B3;
+
+footer > span, footer > span > a {
+  font-family: ostrichSansBold;
+  letter-spacing: 4px;
+  font-size: 2.3vh;
+  text-decoration: none;
 }
-.quantity-input::-ms-input-placeholder {
-    font-weight: lighter;
-    color:#AFB2B3;
-} */
+
+footer > span > a:hover {
+  color: blue;
+}

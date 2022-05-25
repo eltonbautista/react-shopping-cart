@@ -24,6 +24,9 @@ const ShoppingCart = (props) => {
       <div className={styles['cart-total']}>
         Cart Total: {parseFloat(myTotal).toFixed(2)}
       </div>
+      <footer>
+      <span>Created with ♥ by: <a href="https://twitter.com/psychtotech" target="_blank" rel="noopener noreferrer">PsychToTech</a></span>
+      </footer>
     </div>
   );
 }
