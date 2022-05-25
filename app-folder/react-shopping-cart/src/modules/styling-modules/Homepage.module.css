@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
   font-family: palanquin;
   src: url('../../assets/fonts/palanquin-light.ttf');
 }
 @font-face {
   font-family: ostrichSans;
   src: url('../../assets/fonts/ostrich-sans-master/OstrichSans-Medium.otf');
-}
+} */
 /* HOMEPAGE */
 
 .homepageDiv, .extra-info {
@@ -38,21 +38,21 @@
 .description-one-header, .description-two-header {
   font-size: 36px;
   letter-spacing: 0.5vh;
-  font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: ostrichSansBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .description-one {
   padding: 10px;
-  font-family: palanquin, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: 0.1vh;
-  font-size: 2vh;
+  font-family: ostrichSansBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.2vh;
+  font-size: 2.2vh;
   justify-self: center;
 }
 
 /* EXTRA INFO DIV */
 .extra-info {
   border: 1px solid wheat;
-  width: 62%;
+  width: 70%;
   margin: 5px 0 5px 2vw;
   justify-self: start;
   /* margin-left: 50px; */
@@ -63,9 +63,9 @@
 }
 
 .description-two {
-  font-family: palanquin, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: 0.1vh;
-  font-size: 2vh;
+  font-family: ostrichSansBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.2vh;
+  font-size: 2.2vh;
   justify-self: start;
   padding-left: 1vw;
 }
@@ -95,7 +95,7 @@
   /* justify-self: end; */
   display: grid;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   background-image: url('../../assets/images/design/cayr.jpg');
   background-size: cover;
   background-position: 0 -100px;
@@ -105,25 +105,79 @@
 }
 
 .description-three-div {
+  display: grid;
   position: absolute;
-  bottom: -300px;
+  bottom: -97vh;
   border: 1px solid wheat;
+  border-bottom: none;
   width: 100%;
   /* margin: 5px 0 5px 0; */
   justify-self: end;
   padding: 10px;
   /* animation: slidein 7s infinite; */
+  height: 92vh;
 }
 
+.description-three-div > h2, .description-three-div > p {
+  /* display: b; */
+  height: fit-content;
+  font-size: 4vh;
+  font-family: ostrichSansBold;
+  letter-spacing: 1vw;
+  background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(38, 14, 221));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  justify-self: center;
+}
+
+.links-div {
+  width: fit-content;
+  padding: 3vh;
+}
+
+.links-div * {
+  font-family: ostrichSansBold;
+  font-size: 4vh;
+}
+
+.links-div > h3 {
+  text-decoration: underline;
+  letter-spacing: 0.3vw;
+}
 
 .links-div > ul {
-  display: grid;
-  padding: none;
-  margin: none;  
+  padding: 0;
+  margin: 0;  
+  list-style: none;
+}
+
+.links-div > ul > li {
+  text-decoration: none;
+}
+
+.links-div > ul > li > a {
+  color: wheat;
+  text-decoration: none;
+  font-size: 3vh;
+}
+
+.links-div > ul > li > button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  font-size: 3vh;
 }
 
 /* FOOTER */
 .footer-div {
   display: grid;
+  grid-auto-flow: column;
+  /* justify-items: center; */
+  justify-content: end;
+  padding-right: 10vw;
 }
 

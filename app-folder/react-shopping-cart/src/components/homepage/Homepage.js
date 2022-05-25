@@ -7,14 +7,15 @@ const Homepage = (props) => {
   // An object to store information that's used in the JSX
   const fillInformation = {
     descriptionHeader: 'Our Vision...',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: 
+    'We are a company dedicated to delivering modernity in essence... Whilst maintaining the value of the past. We understand that fashion is a statement and that everybody has their own unique sense of individuality. We embrace those who embrace uniqueness and prioritize revolutionizing the fashion fashion fashion world..',
     imgOneSrc: '',
     imgOneAlt: 'store',
     imgTwoSrc: '',
     imgTwoAlt: '',
-    extraInfoHeading: 'Extra Information Heading',
-    extraInfo: '',
-    moreInfo: '" The spirit is willing but the flesh is weak. "'
+    extraInfoHeading: 'Come As You Are',
+    extraInfo: 'One of the core foundations of our company is our motto: COME AS YOU ARE. We are a company with various differing backgrounds, this is why we emphasize the value of embracing those who may be different from us. As others have given us a chance, we have focused creating this company to give others that opportunity and we are doing this through our award-winning designers who have come from all depths of the world to create the ultimate clothing - no.. Fashion Coporation!',
+    moreInfo: '"The spirit is willing but the flesh is weak."'
   }
 
   return (
@@ -27,7 +28,7 @@ const Homepage = (props) => {
       <div className={`homepage ${styles['extra-info']}`}>
         <h3 className={styles['description-two-header']}>{fillInformation.extraInfoHeading}</h3>
         <p className={styles['description-two']}>
-          {fillInformation.description}
+          {fillInformation.extraInfo}
         </p>
       </div>
       <ImgInDiv src={fillInformation.imgTwoSrc} stylingClass={styles['lady-sitting-image-div']} alt={fillInformation.imgTwoAlt} />
@@ -58,8 +59,8 @@ const Homepage = (props) => {
           <div className={styles['links-div']}>
             <h3>Company</h3>
             <ul>
-              <li><button></button></li>
-              <li><button></button></li>
+              <li><button>About</button></li>
+              <li><button>Contact Us</button></li>
             </ul>
           </div>
 

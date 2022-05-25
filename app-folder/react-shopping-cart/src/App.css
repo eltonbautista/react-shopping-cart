@@ -52,7 +52,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #app > div {
   padding-top: 15vh;
-  /* height: 100vh; */
 }
 
 header {
@@ -63,7 +62,6 @@ header {
   padding-top: 0.4vh;
   position: fixed;
   width: 100vw;
-  /* margin-bottom: 10vh; */
   z-index: 5;
 }
 header > a {
@@ -76,10 +74,29 @@ header > a > h1 {
   letter-spacing: 2.3vh;
   font-size: 5vh;
   text-shadow: -3px 3px 1px red, -6px 6px 1px blue;
-  border: .1vh solid wheat;
-  padding-left: 2.2vh;
-  background: black;
-  /* z-index: 5; */
+  padding-left: 2vh;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  animation: typewriter 2.5s steps(20) 1s 1 normal both,
+             blinkCursor 400ms steps(20) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 455px;
+  }
+}
+
+@keyframes blinkCursor{
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 #nav-bar {
