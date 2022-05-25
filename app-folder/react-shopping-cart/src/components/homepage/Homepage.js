@@ -2,6 +2,7 @@ import React from "react";
 import ImgInDiv from "./ImgInDiv";
 import styles from '../../modules/styling-modules/Homepage.module.css';
 import inStore from '../../assets/images/design/picture-of-store.jpg';
+import Carousel from "./ProductCarousel";
 
 const Homepage = (props) => {
   // An object to store information that's used in the JSX
@@ -36,7 +37,8 @@ const Homepage = (props) => {
         <h2>
           {fillInformation.moreInfo}
         </h2>
-        <div>Transitioning pictures of product</div>
+        {/* CAROUSEL */}
+        <Carousel />
         <div className={styles['footer-div']}>
           <div className={styles['links-div']}>
             <h3>Creator</h3>

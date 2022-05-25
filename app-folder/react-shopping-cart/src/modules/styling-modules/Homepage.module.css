@@ -86,6 +86,21 @@
   /* z-index: 1; */
 }
 
+.carousel {
+  justify-self: start;
+  width: 12vw;
+  height: 50vh;
+  background-size:contain;
+  background-position: center;
+  background-attachment: scroll;
+  position: sticky;
+  top: 170px;
+  left: 55.5vw;
+  box-shadow: 5px 5px 8px black, -5px 5px 8px black, 5px 5px 30px inset black, -5px 5px 30px inset black;
+  border-radius: 5%;
+  transform: rotate(-4deg);
+}
+
 .homepageImage {
   opacity: 0;
   /* height: 50vh; */
@@ -124,10 +139,12 @@
   font-size: 4vh;
   font-family: ostrichSansBold;
   letter-spacing: 1vw;
-  background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(38, 14, 221));
+  background: -webkit-linear-gradient(rgb(13, 0, 255), rgb(175, 54, 54));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   justify-self: center;
+
+  
 }
 
 .links-div {
@@ -159,6 +176,10 @@
   color: wheat;
   text-decoration: none;
   font-size: 3vh;
+}
+
+.links-div > ul > li > a:hover {
+  color: blue;
 }
 
 .links-div > ul > li > button {
