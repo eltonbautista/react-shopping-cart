@@ -22,14 +22,6 @@
   /* z-index: 2; */
 }
 
-/* .product-page-men > div:first-of-type  {
-  background-color: rgba(0, 0, 0, 0.883);
-}
-
-.product-page-women > div:first-of-type {
-  background-color: rgba(0, 0, 0, 0.883);
-} */
-
 .product-page-ul {
   display: grid;
   grid-auto-flow: column;
@@ -56,6 +48,29 @@
   letter-spacing: 8px;
   font-size: 6vh;
   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #fbfaff 10%,
+    #2f00ff 29%,
+    #ff0000 67%,
+    #ff0000 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* PRODUCTS */

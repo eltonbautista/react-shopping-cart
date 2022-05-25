@@ -16,7 +16,7 @@ const Homepage = (props) => {
     imgTwoAlt: '',
     extraInfoHeading: 'Come As You Are',
     extraInfo: 'One of the core foundations of our company is our motto: COME AS YOU ARE. We are a company with various differing backgrounds, this is why we emphasize the value of embracing those who may be different from us. As others have given us a chance, we have focused creating this company to give others that opportunity and we are doing this through our award-winning designers who have come from all depths of the world to create the ultimate clothing - no.. Fashion Coporation!',
-    moreInfo: '"The spirit is willing but the flesh is weak."'
+    moreInfo: '"COME AS YOU ARE"'
   }
 
   return (
