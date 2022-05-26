@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/react-shopping-cart/static/css/main.62371311.css",
-    "main.js": "/react-shopping-cart/static/js/main.85c693dd.js",
+    "main.css": "/react-shopping-cart/static/css/main.126a53be.css",
+    "main.js": "/react-shopping-cart/static/js/main.d080709a.js",
     "static/media/women-shorts.jpg": "/react-shopping-cart/static/media/women-shorts.855599b57878ceecbcd9.jpg",
     "static/media/men-leather-pouch.jpg": "/react-shopping-cart/static/media/men-leather-pouch.d4a573cf8461f91d0aad.jpg",
     "static/media/men-white-pants.jpg": "/react-shopping-cart/static/media/men-white-pants.55b3950519451eb5f66c.jpg",
     "static/media/letters-lighting.jpg": "/react-shopping-cart/static/media/letters-lighting.7c81f84b12d5df76dfdf.jpg",
     "static/media/women-denim-jacket.jpg": "/react-shopping-cart/static/media/women-denim-jacket.c0e169d38d2b0bf4c94f.jpg",
-    "static/media/picture-of-store.jpg": "/react-shopping-cart/static/media/picture-of-store.884a5195ddaaaae87de6.jpg",
     "static/media/women-black-tank.jpg": "/react-shopping-cart/static/media/women-black-tank.5d13161903ffc0a5d9ac.jpg",
     "static/media/men-suit.jpg": "/react-shopping-cart/static/media/men-suit.d5f7014d6f682c09a380.jpg",
     "static/media/vintage.jpg": "/react-shopping-cart/static/media/vintage.be38070b2dabac9de194.jpg",
@@ -31,11 +30,11 @@
     "static/media/OstrichSans-Light.otf": "/react-shopping-cart/static/media/OstrichSans-Light.81bf5f77a317c728feef.otf",
     "static/media/shopping-bag-svgrepo-com.svg": "/react-shopping-cart/static/media/shopping-bag-svgrepo-com.4014a725569a9cb5189445de98eda131.svg",
     "index.html": "/react-shopping-cart/index.html",
-    "main.62371311.css.map": "/react-shopping-cart/static/css/main.62371311.css.map",
-    "main.85c693dd.js.map": "/react-shopping-cart/static/js/main.85c693dd.js.map"
+    "main.126a53be.css.map": "/react-shopping-cart/static/css/main.126a53be.css.map",
+    "main.d080709a.js.map": "/react-shopping-cart/static/js/main.d080709a.js.map"
   },
   "entrypoints": [
-    "static/css/main.62371311.css",
-    "static/js/main.85c693dd.js"
+    "static/css/main.126a53be.css",
+    "static/js/main.d080709a.js"
   ]
 }
