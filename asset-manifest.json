@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-shopping-cart/static/css/main.6dcd8d2a.css",
-    "main.js": "/react-shopping-cart/static/js/main.92cab8af.js",
+    "main.js": "/react-shopping-cart/static/js/main.85c693dd.js",
     "static/media/women-shorts.jpg": "/react-shopping-cart/static/media/women-shorts.855599b57878ceecbcd9.jpg",
     "static/media/men-leather-pouch.jpg": "/react-shopping-cart/static/media/men-leather-pouch.d4a573cf8461f91d0aad.jpg",
     "static/media/men-white-pants.jpg": "/react-shopping-cart/static/media/men-white-pants.55b3950519451eb5f66c.jpg",
@@ -32,10 +32,10 @@
     "static/media/shopping-bag-svgrepo-com.svg": "/react-shopping-cart/static/media/shopping-bag-svgrepo-com.4014a725569a9cb5189445de98eda131.svg",
     "index.html": "/react-shopping-cart/index.html",
     "main.6dcd8d2a.css.map": "/react-shopping-cart/static/css/main.6dcd8d2a.css.map",
-    "main.92cab8af.js.map": "/react-shopping-cart/static/js/main.92cab8af.js.map"
+    "main.85c693dd.js.map": "/react-shopping-cart/static/js/main.85c693dd.js.map"
   },
   "entrypoints": [
     "static/css/main.6dcd8d2a.css",
-    "static/js/main.92cab8af.js"
+    "static/js/main.85c693dd.js"
   ]
 }
