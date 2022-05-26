@@ -1,8 +1,8 @@
 import React from "react";
 import ImgInDiv from "./ImgInDiv";
 import styles from '../../modules/styling-modules/Homepage.module.css';
-import inStore from '../../assets/images/design/picture-of-store.jpg';
 import Carousel from "./ProductCarousel";
+import HomepageFooter from "./HomepageFooter";
 
 const Homepage = (props) => {
   // An object to store information that's used in the JSX
@@ -37,47 +37,9 @@ const Homepage = (props) => {
         <h2>
           {fillInformation.moreInfo}
         </h2>
-        {/* CAROUSEL */}
         <Carousel />
-        <div className={styles['footer-div']}>
-          <div className={styles['links-div']}>
-            <h3>Creator</h3>
-            <ul>
-              <li>
-                <a href="https://github.com/eltonbautista" target="_blank" 
-                   rel="noopener noreferrer">Github</a>
-                </li>
-              <li>
-                <a href="https://twitter.com/psychtotech" target="_blank" 
-                   rel="noopener noreferrer">Twitter</a>
-                </li>
-              <li>
-                <a href="https://www.linkedin.com/in/elton-bautista-496a011ab/" target="_blank" 
-                   rel="noopener noreferrer">LinkedIn</a>
-                </li>
-            </ul>
-          </div>
-
-          <div className={styles['links-div']}>
-            <h3>Company</h3>
-            <ul>
-              <li><button>About</button></li>
-              <li><button>Contact Us</button></li>
-              <li><button>Careers</button></li>
-              <li><button>Privacy Policy</button></li>
-              <li><button>Terms & Conditions</button></li>
-            </ul>
-          </div>
-          <div className={styles['links-div']}>
-          <h3>Service</h3>
-            <ul>
-              <li><button>Shipping Methods</button></li>
-              <li><button>Returns & Exchanges</button></li>
-            </ul>
-          </div>
-        </div>
+        <HomepageFooter styles={styles} />
       </div>
-
     </div>
   );
 };

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import mapList from "../../modules/map-list";
 import styles from '../../modules/styling-modules/ShoppingCart.module.css';
 
 const ShoppingCart = (props) => {
-  const { myProductsArray, items, quantHandler } = props;
+  const { myProductsArray, items } = props;
 
-    // Maps myProductsArray to be a list of components;
+  // Maps myProductsArray to be a list of components;
   const cartProducts = mapList(myProductsArray, 'inCart', 1);
 
   // Helper function for totaling price of all items in my cart;

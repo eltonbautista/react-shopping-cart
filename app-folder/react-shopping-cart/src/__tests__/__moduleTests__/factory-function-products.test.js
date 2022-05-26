@@ -14,20 +14,11 @@ describe('Testing my product factory function', () => {
       imgAlt: 'young man in blue-jacket',
       isInCart: false,
       isInCartFunction: firstProductProperties.isInCartFunction,
-      quantity: 0,
-      incrementQuantity: firstProductProperties.incrementQuantity,
-      decrementQuantity: firstProductProperties.decrementQuantity
+      quantity: '',
+      setQuantity: firstProductProperties.setQuantity,
     });
     
   });
   
-  it('Checking if object methods are working properly', () => {
-    
-    expect(firstProduct.isInCartFunction(true)).toBe(true);
-    expect(firstProduct.incrementQuantity()).toBe(1);
-    expect(firstProduct.decrementQuantity()).toBe(0);
-    expect(firstProduct.decrementQuantity()).toBe(-1);
-    
-  });
 
 });

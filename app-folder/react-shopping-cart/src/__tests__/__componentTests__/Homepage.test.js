@@ -13,8 +13,8 @@ describe('Tests for Homepage', () => {
     const { getByRole } = render(<Homepage />);
     const tree = renderer.create(<Homepage />).toJSON();
     
-    expect(screen.getAllByRole('heading')[0].textContent).toMatch(/webpage description/i);
-    expect(screen.getAllByRole('heading')[1].textContent).toMatch(/extra information heading/i);
+    expect(screen.getAllByRole('heading')[0].textContent).toMatch(/our vision/i);
+    expect(screen.getAllByRole('heading')[1].textContent).toMatch(/come as you are/i);
     
   });
 

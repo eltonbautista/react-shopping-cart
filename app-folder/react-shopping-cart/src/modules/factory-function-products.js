@@ -1,6 +1,4 @@
 // A factory function responsible for creating my product objects.
-import Product from "../components/product-components/Product";
-
 const factoryFunctionProducts = (productName, productCategory, productTotal, imgSrc, imgAlt, isInCart) => {
   // Make sure price is a number
   const productPrice = parseFloat(productTotal.toFixed(2));
@@ -22,18 +20,7 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     this.quantity = quant;
     return quant;
   };
-
-  // Both of these methods are currently unnecessary since [input type='number'] does their job
-  const incrementQuantity = function() {
-    this.productTotal += productPrice;
-    return this.quantity = this.quantity += 1;
-  };
-
-  const decrementQuantity = function() {
-    this.productTotal -= productPrice;
-    return this.quantity = this.quantity -= 1;
-  };
-
+  
   return {
     productName,
     productCategory,
@@ -43,8 +30,6 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
     isInCart,
     isInCartFunction,
     quantity: '',
-    incrementQuantity,
-    decrementQuantity,
     productPrice,
     setQuantity,
 

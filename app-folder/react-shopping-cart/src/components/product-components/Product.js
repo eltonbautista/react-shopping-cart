@@ -5,6 +5,10 @@ import styles from '../../modules/styling-modules/Products.module.css';
 
 // My Product components are going to be cards that have an img, name, and description. 
 const Product = (props) => {
+
+  // I wanted to increase the privacy of my data through abstraction so I created public methods on my productObject(s)
+  // By using an object for most of my properties, I can update them via methods and then setState. 
+
   const { productName, productCategory, imgSrc, imgAlt, isInCart, productPrice, children } = props.productObject;
   const itemId = noSpacesOrSingleQuotes(productName);
   return (

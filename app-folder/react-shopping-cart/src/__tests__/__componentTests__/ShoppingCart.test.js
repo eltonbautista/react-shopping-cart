@@ -24,7 +24,7 @@ describe('Tests for my ShoppingCart', () => {
     render(<RouteSwitch />);
 
     act(() => {
-      userEvent.click(screen.getByRole('button', {name: 'Cart'}));
+      userEvent.click(screen.getByRole('img', {alt: 'cart'}));
     })
 
     expect(screen.getByText('There are no items in your cart...')).toBeInTheDocument();
@@ -40,7 +40,7 @@ describe('Tests for my ShoppingCart', () => {
     
     expect(screen.getByText(/remove from bag/i)).toBeInTheDocument();
 
-    userEvent.click(screen.getByRole('button', {name: 'Cart'}));
+    userEvent.click(screen.getByRole('img', {name: 'cart'}));
     expect(screen.getByText(/your items/i)).toBeInTheDocument();
     expect(screen.getByText(/cart total: 19.99/i)).toBeInTheDocument();
   });

@@ -26,7 +26,7 @@ describe('Testing App component through my RouteSwitch component', () => {
     )})
 
     userEvent.click(screen.getByRole('button', {name: /home/i}));
-    expect(screen.getByText('Webpage Description')).toBeInTheDocument();
+    expect(screen.getByText('Our Vision...')).toBeInTheDocument();
 
     userEvent.click(screen.getByTestId('mens'));
     expect(screen.getAllByText("Men's")[0]).toBeInTheDocument();
