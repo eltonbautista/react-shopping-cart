@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/meemo-boutique/static/css/main.e2883415.css",
+    "main.js": "/meemo-boutique/static/js/main.22501a15.js",
+    "static/media/women-shorts.jpg": "/meemo-boutique/static/media/women-shorts.855599b57878ceecbcd9.jpg",
+    "static/media/men-leather-pouch.jpg": "/meemo-boutique/static/media/men-leather-pouch.d4a573cf8461f91d0aad.jpg",
+    "static/media/men-white-pants.jpg": "/meemo-boutique/static/media/men-white-pants.55b3950519451eb5f66c.jpg",
+    "static/media/letters-lighting.jpg": "/meemo-boutique/static/media/letters-lighting.7c81f84b12d5df76dfdf.jpg",
+    "static/media/women-denim-jacket.jpg": "/meemo-boutique/static/media/women-denim-jacket.c0e169d38d2b0bf4c94f.jpg",
+    "static/media/picture-of-store.jpg": "/meemo-boutique/static/media/picture-of-store.884a5195ddaaaae87de6.jpg",
+    "static/media/women-black-tank.jpg": "/meemo-boutique/static/media/women-black-tank.5d13161903ffc0a5d9ac.jpg",
+    "static/media/men-suit.jpg": "/meemo-boutique/static/media/men-suit.d5f7014d6f682c09a380.jpg",
+    "static/media/vintage.jpg": "/meemo-boutique/static/media/vintage.be38070b2dabac9de194.jpg",
+    "static/media/men-green-shirt.jpg": "/meemo-boutique/static/media/men-green-shirt.d03cb9a72391c523a910.jpg",
+    "static/media/women-button-up.jpg": "/meemo-boutique/static/media/women-button-up.cbb0b05faf19e8881fd7.jpg",
+    "static/media/lightOne.jpg": "/meemo-boutique/static/media/lightOne.8f2b399ee59e08175b62.jpg",
+    "static/media/men-crewneck.jpg": "/meemo-boutique/static/media/men-crewneck.6324b801fe412a6f4c02.jpg",
+    "static/media/women-blazer.jpg": "/meemo-boutique/static/media/women-blazer.22bf7e0b2451f24437ad.jpg",
+    "static/media/women-gold.jpg": "/meemo-boutique/static/media/women-gold.6cf997d34a828b424a57.jpg",
+    "static/media/men-hoodie.jpg": "/meemo-boutique/static/media/men-hoodie.c01a0a25fb6c83adc3eb.jpg",
+    "static/media/women-shirt.jpg": "/meemo-boutique/static/media/women-shirt.cebb6e84be8f220c5b7b.jpg",
+    "static/media/men-blue-jacket.jpg": "/meemo-boutique/static/media/men-blue-jacket.b9d9309207638b906b2a.jpg",
+    "static/media/fireflies.jpg": "/meemo-boutique/static/media/fireflies.00af31950c3d8fdf7848.jpg",
+    "static/media/women-watch.jpg": "/meemo-boutique/static/media/women-watch.04e92e1bb9d7943cd353.jpg",
+    "static/media/men-watch.jpg": "/meemo-boutique/static/media/men-watch.31417d27e0f82a669adb.jpg",
+    "static/media/women-hand-chain.jpg": "/meemo-boutique/static/media/women-hand-chain.f31be830d3c335d1a854.jpg",
+    "static/media/men-bracelet.jpg": "/meemo-boutique/static/media/men-bracelet.611dfd3afb843fd462ed.jpg",
+    "static/media/palanquin-light.ttf": "/meemo-boutique/static/media/palanquin-light.e5a7e670a73178c353ab.ttf",
+    "static/media/cayr.jpg": "/meemo-boutique/static/media/cayr.92edb80aeee1e20b6529.jpg",
+    "static/media/OstrichSans-Heavy.otf": "/meemo-boutique/static/media/OstrichSans-Heavy.3a837cdeafd6547e8439.otf",
+    "static/media/OstrichSans-Light.otf": "/meemo-boutique/static/media/OstrichSans-Light.81bf5f77a317c728feef.otf",
+    "static/media/shopping-bag-svgrepo-com.svg": "/meemo-boutique/static/media/shopping-bag-svgrepo-com.4014a725569a9cb5189445de98eda131.svg",
+    "index.html": "/meemo-boutique/index.html",
+    "main.e2883415.css.map": "/meemo-boutique/static/css/main.e2883415.css.map",
+    "main.22501a15.js.map": "/meemo-boutique/static/js/main.22501a15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2883415.css",
+    "static/js/main.22501a15.js"
+  ]
+}
