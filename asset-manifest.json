@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-shopping-cart/static/css/main.6dcd8d2a.css",
+    "main.css": "/react-shopping-cart/static/css/main.a8525439.css",
     "main.js": "/react-shopping-cart/static/js/main.85c693dd.js",
     "static/media/women-shorts.jpg": "/react-shopping-cart/static/media/women-shorts.855599b57878ceecbcd9.jpg",
     "static/media/men-leather-pouch.jpg": "/react-shopping-cart/static/media/men-leather-pouch.d4a573cf8461f91d0aad.jpg",
@@ -31,11 +31,11 @@
     "static/media/OstrichSans-Light.otf": "/react-shopping-cart/static/media/OstrichSans-Light.81bf5f77a317c728feef.otf",
     "static/media/shopping-bag-svgrepo-com.svg": "/react-shopping-cart/static/media/shopping-bag-svgrepo-com.4014a725569a9cb5189445de98eda131.svg",
     "index.html": "/react-shopping-cart/index.html",
-    "main.6dcd8d2a.css.map": "/react-shopping-cart/static/css/main.6dcd8d2a.css.map",
+    "main.a8525439.css.map": "/react-shopping-cart/static/css/main.a8525439.css.map",
     "main.85c693dd.js.map": "/react-shopping-cart/static/js/main.85c693dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dcd8d2a.css",
+    "static/css/main.a8525439.css",
     "static/js/main.85c693dd.js"
   ]
 }
