@@ -114,7 +114,7 @@ header > a > h1 {
     width: 0;
   }
   to {
-    width: calc(475px + 3vw);
+    width: calc(485px + 3.5vw);
   }
 }
 
