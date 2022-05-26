@@ -69,8 +69,6 @@ header > a {
 }
 
 header > a > h1 {
-  height: fit-content;
-  width: fit-content;
   margin-top: 1vh;
   color: wheat;
   font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -116,7 +114,7 @@ header > a > h1 {
     width: 0;
   }
   to {
-    width: 490px;
+    width: 505px;
   }
 }
 
