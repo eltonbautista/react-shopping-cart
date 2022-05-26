@@ -86,7 +86,7 @@ const RouteSwitch = () => {
 
   
   return (    
-   <BrowserRouter>
+   <BrowserRouter basename='/meemo-boutique'>
       <Routes>
         <Route 
         path='/' element=
