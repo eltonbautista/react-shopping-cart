@@ -114,7 +114,7 @@ header > a > h1 {
     width: 0;
   }
   to {
-    width: fit-content;
+    width: 465px;
   }
 }
 
