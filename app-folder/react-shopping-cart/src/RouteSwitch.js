@@ -86,7 +86,7 @@ const RouteSwitch = () => {
 
   
   return (    
-   <BrowserRouter basename='/react-shopping-cart/'>
+   <BrowserRouter basename='/react-shopping-cart'>
       <Routes>
         <Route 
         path='/' element=
