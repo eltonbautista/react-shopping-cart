@@ -236,7 +236,9 @@
 
 .links-div {
   width: fit-content;
-  padding: 3vh;
+  /* padding: 2vh; */
+  padding: none;
+  /* margin-left: 200px; */
 }
 
 .links-div * {
@@ -262,7 +264,7 @@
 .links-div > ul > li > a {
   color: wheat;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 .links-div > ul > li > a:hover {
@@ -277,7 +279,7 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 /* FOOTER */
@@ -285,6 +287,7 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: end;
-  padding-right: 10vw;
+  gap: 2vh;
+  padding-right: 2.2vw;
 }
 

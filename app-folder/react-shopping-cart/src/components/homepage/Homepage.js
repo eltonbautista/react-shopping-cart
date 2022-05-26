@@ -63,9 +63,18 @@ const Homepage = (props) => {
             <ul>
               <li><button>About</button></li>
               <li><button>Contact Us</button></li>
+              <li><button>Careers</button></li>
+              <li><button>Privacy Policy</button></li>
+              <li><button>Terms & Conditions</button></li>
             </ul>
           </div>
-
+          <div className={styles['links-div']}>
+          <h3>Service</h3>
+            <ul>
+              <li><button>Shipping Methods</button></li>
+              <li><button>Returns & Exchanges</button></li>
+            </ul>
+          </div>
         </div>
       </div>
 
