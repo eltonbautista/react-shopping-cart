@@ -7,6 +7,6 @@ import RouteSwitch from './RouteSwitch';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouteSwitch />
+    <RouteSwitch basename='/react-shopping-cart'/>
   </React.StrictMode>
 );

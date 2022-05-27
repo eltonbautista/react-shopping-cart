@@ -32,7 +32,7 @@ const Homepage = (props) => {
           {fillInformation.extraInfo}
         </p>
       </div>
-      <ImgInDiv src={fillInformation.imgTwoSrc} stylingClass={styles['lady-sitting-image-div']} alt={fillInformation.imgTwoAlt} />
+      <ImgInDiv src={fillInformation.imgTwoSrc} stylingClass={styles['caya-div']} alt={fillInformation.imgTwoAlt} />
       <div className={styles['description-three-div']}>
         <h2>
           {fillInformation.moreInfo}

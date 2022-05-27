@@ -24,7 +24,7 @@ describe('Tests for my ShoppingCart', () => {
     render(<RouteSwitch />);
 
     act(() => {
-      userEvent.click(screen.getByRole('img', {alt: 'cart'}));
+      userEvent.click(screen.getAllByRole('img', {alt: 'cart'})[0]);
     })
 
     expect(screen.getByText('There are no items in your cart...')).toBeInTheDocument();

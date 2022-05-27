@@ -9,13 +9,13 @@ function App({ title, cartEventHandler, cartLength }) {
   return (
     <div className="App" id='app' data-testid='App'>
       <header>
-        <Link to='homepage'> 
+        <Link to='/'> 
           <h1>{title}</h1> 
         </Link> {' '}
         
         <nav id="nav-bar">
           {/* Link component can only go in <nav> */}
-          <Link to='homepage'> 
+          <Link to='/'> 
             <button>Home</button> 
           </Link> {' '}
 

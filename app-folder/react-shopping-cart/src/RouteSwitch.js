@@ -10,7 +10,7 @@ import { arrayOfProducts } from './modules/factory-function-products';
 import Product from './components/product-components/Product';
 
 
-const RouteSwitch = () => {
+const RouteSwitch = (props) => {
   // MY STATES
   const myProducts = [...arrayOfProducts[0], ...arrayOfProducts[1]];
   
@@ -74,17 +74,16 @@ const RouteSwitch = () => {
 
   // basename='/react-shopping-cart'
   return (    
-   <BrowserRouter basename='/react-shopping-cart'>
+   <BrowserRouter basename={props.basename}>
       <Routes>
-        <Route 
-        path='/' element=
-        {<App 
+        <Route
+          element=
+        {<App
           title='Meemo Boutique' 
-          // sexButtonHandler={removeInputs} 
           cartEventHandler={toShoppingCartHandler}
           cartLength={cartProducts.length}
         />}>
-          <Route path='homepage' element={<Homepage />} />
+          <Route path='/' element={<Homepage />} />
           <Route path='mens' element=
           {<ProductPage 
             productHeading= "Men's" 

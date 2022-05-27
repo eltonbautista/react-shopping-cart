@@ -84,7 +84,7 @@
   position: sticky;
   top: 170px;
   left: 55.5vw;
-  box-shadow: 5px 5px 8px black, -5px 5px 8px black, 5px 5px 30px inset black, -5px 5px 30px inset black;
+  box-shadow: 5px 5px 8px black, -14px 5px 8px rgba(0, 0, 0, 0.293), 5px 5px 30px inset black, -5px 5px 30px inset black;
   border-radius: 5%;
   transform: rotate(-4deg);
 }
@@ -93,17 +93,18 @@
   opacity: 0;
 }
 
-.lady-sitting-image-div {
+.caya-div {
   display: grid;
   width: 100%;
   height: 100vh;
   background-image: url('../../assets/images/design/cayr.jpg');
-  background-size: cover;
-  background-position: 0 -100px;
+  background-size: 100% 100%;
+  background-position: 0 7vh;
   background-attachment: fixed;
   opacity: 1;
   z-index: -1;
 }
+
 
 .description-three-div {
   display: grid;

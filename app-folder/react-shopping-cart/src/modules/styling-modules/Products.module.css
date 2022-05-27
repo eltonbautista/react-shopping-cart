@@ -15,8 +15,8 @@
 }
 
 .product-page-women {
-  background-image: url('../../assets/images/design/fireflies.jpg');
-  background-size: cover;
+  background-image: url('../../assets/images/design/lialg.jpg');
+  background-size: 100% 300%;
   background-position: center;
   background-attachment: fixed;
   /* z-index: 2; */
@@ -91,7 +91,7 @@
 .product-image-div {
     width: 10vw;
     height: 30vh;
-    box-shadow: -6px 6px 5px red, -3px 3px 5px red, 6px -6px 5px blue, 3px -3px 5px blue;
+    box-shadow: -6px 6px 5px rgba(255, 0, 0, 0.504), -3px 3px 5px rgba(255, 0, 0, 0.504), 6px -6px 5px rgba(0, 0, 255, 0.504), 3px -3px 5px rgba(0, 0, 255, 0.504);
     /* margin-bottom: 1vh; */
 }
 
@@ -104,6 +104,7 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    /* padding */
 }
 
 .product-list {
