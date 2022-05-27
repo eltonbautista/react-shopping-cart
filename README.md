@@ -1,4 +1,4 @@
-# react-shopping-cart
+# Meemo Boutique
 #### A shopping cart application created with React.js and styled with vanilla CSS.
 
 ### Project objectives:
