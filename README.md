@@ -1,5 +1,5 @@
 # Meemo Boutique
-__A shopping cart application created with React.js and styled with vanilla CSS.__
+__A shopping cart application created with React.js, tested with Jest, and styled with vanilla CSS.__
 
 ### Project objectives:
 - __Apply previously learned concepts to create a functioning multipage Shopping Cart Application with React and React Router.__
