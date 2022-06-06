@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from '../../modules/styling-modules/Homepage.module.css';
-import { carouselProducts } from "../../modules/preload";
+import { homepageImages } from "../../modules/preload";
 
 
 function Carousel() {
 
   const [product, setProduct] = useState(0);
   const myStyle = {
-    backgroundImage: `url(${carouselProducts[product].currentSrc})`
+    backgroundImage: `url(${homepageImages[product].src})`
   }
 
   // My thinking was that I needed some way to re-render my component an infinite number of times, setInterval seemed appropriate

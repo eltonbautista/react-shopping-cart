@@ -8,14 +8,14 @@
 }
 
 .product-page-men {
-  background-image: url('../../assets/images/design/letters-lighting.jpg');
+  /* background-image: url('../../assets/images/design/letters-lighting.jpg'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .product-page-women {
-  background-image: url('../../assets/images/design/lialg.jpg');
+  /* background-image: url('../../assets/images/design/lialg.jpg'); */
   background-size: 100% 300%;
   background-position: center;
   background-attachment: fixed;

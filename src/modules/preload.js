@@ -20,9 +20,15 @@ import womenShorts from '../assets/images/womens/women-hand-chain.jpg';
 import womenGold from '../assets/images/womens/women-shirt.jpg';
 import womenHand from '../assets/images/womens/women-watch.jpg';
 
+// Design images
+import vintage from '../assets/images/design/vintage.jpg';
+import blueLights from '../assets/images/design/lightOne.jpg';
+import caya from '../assets/images/design/cayr.jpg';
+import mensBackground from '../assets/images/design/letters-lighting.jpg';
+import womensBackground from '../assets/images/design/lialg.jpg';
 
 // A list of items I want to display in my image Carousel 
-const carouselProducts = [];
+const homepageImages = [];
 const mensProducts = [];
 const womensProducts = [];
 const arrayOfMensImages = [jacket, crewneck, shirt, hoodie, suit, pants, bracelet, pouch, watch];
@@ -40,10 +46,9 @@ export default function preload(images, fillArr) {
   }
 };
 
-preload([hoodie, bracelet, womenWatch, tank], carouselProducts);
+preload([hoodie, bracelet, womenWatch, tank, vintage, blueLights, caya, mensBackground, womensBackground], homepageImages);
 preload(arrayOfMensImages, mensProducts);
 preload(arrayOfWomensImages, womensProducts);
-console.log(carouselProducts[0].currentSrc)
-console.log(mensProducts[0].currentSrc);
 
-export { carouselProducts, mensProducts, womensProducts };
+
+export { homepageImages, mensProducts, womensProducts };

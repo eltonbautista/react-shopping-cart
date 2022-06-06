@@ -1,9 +1,9 @@
 import React from "react";
 
-const ImgInDiv = ({ src, alt, stylingClass, imgStyling }) => {
-
+const ImgInDiv = ({ src, alt, stylingClass, imgStyling, backgroundImage }) => {
+  
   return (
-    <div className={stylingClass}>
+    <div style={backgroundImage} className={stylingClass}>
       <img className={imgStyling} src={src} alt={alt} />
     </div>
   )
