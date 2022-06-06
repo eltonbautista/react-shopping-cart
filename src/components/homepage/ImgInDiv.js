@@ -1,6 +1,8 @@
 import React from "react";
 
-const ImgInDiv = ({ src, alt, stylingClass, imgStyling, backgroundImage }) => {
+const ImgInDiv = (props) => {
+
+  const { src, alt, stylingClass, imgStyling, backgroundImage } = props;
   
   return (
     <div style={backgroundImage} className={stylingClass}>
@@ -9,4 +11,4 @@ const ImgInDiv = ({ src, alt, stylingClass, imgStyling, backgroundImage }) => {
   )
 }
 
-export default ImgInDiv;
+export default React.memo(ImgInDiv);

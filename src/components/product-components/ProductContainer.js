@@ -7,7 +7,7 @@ import styles from '../../modules/styling-modules/Products.module.css';
 const ProductContainer = (props) => {
   const { products, } = props;
   const myProducts = mapList(products, 'proddy');
-
+  
   return (
     <div className={styles['product-page-container']}  data-testid='product-container'>
       <ul className={styles['product-page-ul']}>

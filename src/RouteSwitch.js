@@ -110,5 +110,5 @@ const RouteSwitch = (props) => {
    </BrowserRouter>);
   }
 
-  export default RouteSwitch;
+  export default React.memo(RouteSwitch);
 
