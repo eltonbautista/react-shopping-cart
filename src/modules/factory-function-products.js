@@ -1,3 +1,6 @@
+import { mensProducts, womensProducts } from './preload';
+
+
 // A factory function responsible for creating my product objects.
 const factoryFunctionProducts = (productName, productCategory, productTotal, imgSrc, imgAlt, isInCart) => {
   // Make sure price is a number
@@ -35,49 +38,48 @@ const factoryFunctionProducts = (productName, productCategory, productTotal, img
 
   }
 }
-
 // NEED TO DRY
 const arrayOfProducts =
  [
    [
     
-    factoryFunctionProducts("Men's Blue Jacket", "Men's", 69.99, require('../assets/images/mens/men-blue-jacket.jpg'), 'young man in blue-jacket', false ),
+    factoryFunctionProducts("Men's Blue Jacket", "Men's", 69.99, mensProducts[0].currentSrc, 'young man in blue-jacket', false ),
     
-    factoryFunctionProducts("Men's Crewneck", "Men's", 39.99, require('../assets/images/mens/men-crewneck.jpg'), 'young man in crewneck', false ),
+    factoryFunctionProducts("Men's Crewneck", "Men's", 39.99, mensProducts[1].currentSrc, 'young man in crewneck', false ),
     
-    factoryFunctionProducts("Men's Shirt", "Men's", 19.99, require('../assets/images/mens/men-green-shirt.jpg'), 'man in green shirt', false ),
+    factoryFunctionProducts("Men's Shirt", "Men's", 19.99, mensProducts[2].currentSrc, 'man in green shirt', false ),
     
-    factoryFunctionProducts("Men's Hoodie", "Men's", 49.99, require('../assets/images/mens/men-hoodie.jpg'), 'young man in hoodie', false ),
+    factoryFunctionProducts("Men's Hoodie", "Men's", 49.99, mensProducts[3].currentSrc, 'young man in hoodie', false ),
     
-    factoryFunctionProducts("Men's Suit", "Men's", 129.99, require('../assets/images/mens/men-suit.jpg'), 'young man in suit', false ),
+    factoryFunctionProducts("Men's Suit", "Men's", 129.99, mensProducts[4].currentSrc, 'young man in suit', false ),
     
-    factoryFunctionProducts("Men's White Pants", "Men's", 59.99, require('../assets/images/mens/men-white-pants.jpg'), 'young man in white pants', false ),
+    factoryFunctionProducts("Men's White Pants", "Men's", 59.99, mensProducts[5].currentSrc, 'young man in white pants', false ),
     
-    factoryFunctionProducts("Men's Bracelet", "Men's", 29.99, require('../assets/images/mens/men-bracelet.jpg'), 'bracelet', false ),
+    factoryFunctionProducts("Men's Bracelet", "Men's", 29.99, mensProducts[6].currentSrc, 'bracelet', false ),
     
-    factoryFunctionProducts("Men's Leather Pouch", "Men's", 59.99, require('../assets/images/mens/men-leather-pouch.jpg'), 'accessories and leather pouch', false ),
+    factoryFunctionProducts("Men's Leather Pouch", "Men's", 59.99, mensProducts[7].currentSrc, 'accessories and leather pouch', false ),
     
-    factoryFunctionProducts("Men's Watch", "Men's", 69.99, require('../assets/images/mens/men-watch.jpg'), 'men\'s watch', false )
+    factoryFunctionProducts("Men's Watch", "Men's", 69.99, mensProducts[8].currentSrc, 'men\'s watch', false )
    ],
    [
      
-     factoryFunctionProducts("Women's Black Tank", "Women's", 19.99, require('../assets/images/womens/women-black-tank.jpg'), 'young woman in black tanktop', false ),
+     factoryFunctionProducts("Women's Black Tank", "Women's", 19.99, womensProducts[0].currentSrc, 'young woman in black tanktop', false ),
      
-     factoryFunctionProducts("Women's Blazer", "Women's", 69.99, require('../assets/images/womens/women-blazer.jpg'), 'young woman in orange blazer', false ),
+     factoryFunctionProducts("Women's Blazer", "Women's", 69.99, womensProducts[1].currentSrc, 'young woman in orange blazer', false ),
      
-     factoryFunctionProducts("Women's Button-Up", "Women's", 39.99, require('../assets/images/womens/women-button-up.jpg'), 'young woman in button-up', false ),
+     factoryFunctionProducts("Women's Button-Up", "Women's", 39.99, womensProducts[2].currentSrc, 'young woman in button-up', false ),
      
-     factoryFunctionProducts("Women's Denim Jacket", "Women's", 49.99, require('../assets/images/womens/women-denim-jacket.jpg'), 'young woman in denim jacket', false ),
+     factoryFunctionProducts("Women's Denim Jacket", "Women's", 49.99, womensProducts[3].currentSrc, 'young woman in denim jacket', false ),
      
-     factoryFunctionProducts("Women's Shirt", "Women's", 21.99, require('../assets/images/womens/women-shirt.jpg'), 'young woman in shirt', false ),
+     factoryFunctionProducts("Women's Shirt", "Women's", 21.99, womensProducts[4].currentSrc, 'young woman in shirt', false ),
      
-     factoryFunctionProducts("Women's Denim Shorts", "Women's", 39.99, require('../assets/images/womens/women-shorts.jpg'), 'young woman in denim shorts', false ),
+     factoryFunctionProducts("Women's Denim Shorts", "Women's", 39.99, womensProducts[5].currentSrc, 'young woman in denim shorts', false ),
      
-     factoryFunctionProducts("Women's Gold Chain", "Women's", 49.99, require('../assets/images/womens/women-gold.jpg'), 'women\'s gold chain', false ),
+     factoryFunctionProducts("Women's Gold Chain", "Women's", 49.99, womensProducts[6].currentSrc, 'women\'s gold chain', false ),
      
-     factoryFunctionProducts("Women's Hand Chain", "Women's", 39.99, require('../assets/images/womens/women-hand-chain.jpg'), 'hand with chain', false ),
+     factoryFunctionProducts("Women's Hand Chain", "Women's", 39.99, womensProducts[7].currentSrc, 'hand with chain', false ),
      
-     factoryFunctionProducts("Women's Watch", "Women's", 39.99, require('../assets/images/womens/women-watch.jpg'), 'women\'s watch', false ),
+     factoryFunctionProducts("Women's Watch", "Women's", 39.99, womensProducts[8].currentSrc, 'women\'s watch', false ),
     ],
  ]
 

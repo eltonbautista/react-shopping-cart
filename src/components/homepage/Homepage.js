@@ -4,7 +4,7 @@ import styles from '../../modules/styling-modules/Homepage.module.css';
 import Carousel from "./ProductCarousel";
 import HomepageFooter from "./HomepageFooter";
 
-const Homepage = (props) => {
+const Homepage = function Homepage(props) {
   // An object to store information that's used in the JSX
   const fillInformation = {
     descriptionHeader: 'Our Vision...',
@@ -44,4 +44,4 @@ const Homepage = (props) => {
   );
 };
 
-export default Homepage;
+export default React.memo(Homepage);

@@ -1,4 +1,4 @@
-
+import React from "react";
 // Separated into own module for cleanliness
 
 function HomepageFooter({styles}) {
@@ -43,4 +43,4 @@ function HomepageFooter({styles}) {
   )
 };
 
-export default HomepageFooter;
+export default React.memo(HomepageFooter);

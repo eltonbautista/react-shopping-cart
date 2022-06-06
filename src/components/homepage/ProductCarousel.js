@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from "react";
-import hoodie from '../../assets/images/mens/men-hoodie.jpg';
-import bracelet from '../../assets/images/mens/men-bracelet.jpg';
-import watch from '../../assets/images/womens/women-watch.jpg';
-import tank from '../../assets/images/womens/women-black-tank.jpg';
 import styles from '../../modules/styling-modules/Homepage.module.css';
-
+import { carouselProducts } from "../../modules/preload";
 
 
 function Carousel() {
-  // Created a list of items I want to display in my image Carousel 
-  const myProductInfo = [hoodie, bracelet, watch, tank];
-  // Initialize state
 
   const [product, setProduct] = useState(0);
   const myStyle = {
-    backgroundImage: `url(${myProductInfo[product]})`
+    backgroundImage: `url(${carouselProducts[product].currentSrc})`
   }
 
   // My thinking was that I needed some way to re-render my component an infinite number of times, setInterval seemed appropriate
@@ -50,4 +43,4 @@ function Carousel() {
   )
 }
 
-export default Carousel;
+export default React.memo(Carousel);
