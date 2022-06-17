@@ -1,13 +1,13 @@
-Objectives:
+**Objectives:**
 
-Main: Increase my understanding in single-page application work-flow, and React Router.
-Sub: Learn and apply better practices with React function components, hooks, and lifecycle, and also improve my testing ability.
+- Main: Increase my understanding in single-page application work-flow, and React Router.
+- Sub: Learn and apply better practices with React function components, hooks, and lifecycle, and also improve my testing ability.
 
 
-Highlights:
+**Highlights:**
 
-Single-page application that utilizes React Router to display multiple views.
-Tested with Jest to reduce potential errors/bugs, as well as ensure that UI/UX functionalities are in working order.
+- Single-page application that utilizes React Router to display multiple views.
+- Tested with Jest to reduce potential errors/bugs, as well as ensure that UI/UX functionalities are in working order.
 
 Assets used: 
 Cart Icon: https://www.svgrepo.com/svg/114559/shopping-bag
