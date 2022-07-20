@@ -2,34 +2,58 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
 * {
   color: wheat;
   font-weight: 900;
   margin: 0;
   font-family: palanquin;
 }
-html, body {
-  height: 100%;
+
+html,
+body {
+  min-height: 100%;
 }
+
 body {
   background-color: black;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
+
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-#root, #__next {
+
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -50,7 +74,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* APP STYLING */
 
-#app > div {
+#app>div {
   padding-top: 15vh;
 }
 
@@ -64,11 +88,12 @@ header {
   width: 100vw;
   z-index: 5;
 }
-header > a {
+
+header>a {
   text-decoration: none;
 }
 
-header > a > h1 {
+header>a>h1 {
   margin-top: 1vh;
   color: wheat;
   font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -80,27 +105,25 @@ header > a > h1 {
   overflow: hidden;
   border-right: 3px solid white;
   animation: typewriter 2.5s steps(20) 1s 1 normal both,
-             blinkCursor 400ms steps(20) 9 normal,
-             textclip 2s linear infinite;
+    blinkCursor 400ms steps(20) 9 normal,
+    textclip 2s linear infinite;
 
-             text-transform: uppercase;
-             background-image: linear-gradient(
-               -225deg,
-               #fbfaff 30%,
-               #2f00ff 29%,
-               wheat 67%,
-               wheat 100%
-             );
-             background-size: auto auto;
-             background-clip: border-box;
-             background-size: 200% auto;
-             color: #fff;
-             background-clip: text;
-             text-fill-color: transparent;
-             -webkit-background-clip: text;
-             -webkit-text-fill-color: transparent;
-             display: inline-block;
-             box-shadow: -1px 1px 5px white, -3px 3px 5px white, 1px -1px 1px white;
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #fbfaff 30%,
+      #2f00ff 29%,
+      wheat 67%,
+      wheat 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  box-shadow: -1px 1px 5px white, -3px 3px 5px white, 1px -1px 1px white;
 }
 
 @keyframes textclip {
@@ -113,15 +136,17 @@ header > a > h1 {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
-@keyframes blinkCursor{
+@keyframes blinkCursor {
   from {
     border-right-color: white;
   }
+
   to {
     border-right-color: transparent;
   }
@@ -129,32 +154,31 @@ header > a > h1 {
 
 #nav-bar {
   display: grid;
-  /* gap: 7vw; */
   width: 40%;
   grid-auto-flow: column;
   background-color: black;
-  /* box-shadow: -1px 1px 5px white, -3px 3px 5px white, 1px -1px 1px white, 3px -3px 2px white; */
   padding: 5px;
   justify-content: space-around;
 }
 
-#nav-bar > a > button {
+#nav-bar>a>button {
   background: none;
   color: wheat;
   font-size: 22px;
   letter-spacing: 2px;
   font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	outline: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
   font-weight: 600;
 }
-#nav-bar > a > button > div {
+
+#nav-bar>a>button>div {
   align-self: end;
 }
 
-#nav-bar > a {
+#nav-bar>a {
   text-decoration: none;
   color: white;
 }
@@ -163,7 +187,9 @@ header > a > h1 {
   display: grid;
   grid-auto-flow: column;
 }
-#cart-button > div, #cart-button > span{
+
+#cart-button>div,
+#cart-button>span {
   width: 28px;
   font-weight: 600;
   color: red;
@@ -178,17 +204,17 @@ footer {
   height: 5.2vh;
   border: 1px solid red;
   min-width: 100vw;
-  /* opacity: 0.3; */
   align-self: flex-end;
 }
 
-footer > span, footer > span > a {
+footer>span,
+footer>span>a {
   font-family: ostrichSansBold;
   letter-spacing: 4px;
   font-size: 2.3vh;
   text-decoration: none;
 }
 
-footer > span > a:hover {
+footer>span>a:hover {
   color: blue;
 }
