@@ -8,25 +8,25 @@ import { homepageImages } from "../../modules/preload";
 const ProductPage = (props) => {
   const { productHeading, children } = props;
   const [mensBackground, womensBackground] = [
-    {backgroundImage: `url(${homepageImages[7].src})`},
-    {backgroundImage: `url(${homepageImages[8].src})`},
+    { backgroundImage: `url(${homepageImages[7].src})` },
+    { backgroundImage: `url(${homepageImages[8].src})` },
   ];
 
   return (
-    <div id="product-page" data-testid='product-page' 
+    <div id="product-page" data-testid='product-page'
       className={productHeading === 'Men\'s' ? styles['product-page-men'] : styles['product-page-women']}
       style={productHeading === 'Men\'s' ? mensBackground : womensBackground}
-      >
-      
+    >
+
       <div className={styles['product-page-first-div']}>
         <h1>{productHeading}</h1>
       </div>
       {children}
       <footer>
-          <span>Created with ♥ by: <a href="https://twitter.com/psychtotech" target="_blank" rel="noopener noreferrer">PsychToTech</a></span>
+        <span>Created with ♥ by: <a href="https://github.com/eltonbautista" target="_blank" rel="noopener noreferrer">eltonbautista</a></span>
       </footer>
     </div>
-  )
-}
+  );
+};
 
 export default ProductPage;

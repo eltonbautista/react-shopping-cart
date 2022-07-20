@@ -15,10 +15,10 @@ import tank from '../assets/images/womens/women-black-tank.jpg';
 import blazer from '../assets/images/womens/women-blazer.jpg';
 import buttonUp from '../assets/images/womens/women-button-up.jpg';
 import womenJacket from '../assets/images/womens/women-denim-jacket.jpg';
-import womenShirt from '../assets/images/womens/women-gold.jpg';
-import womenShorts from '../assets/images/womens/women-hand-chain.jpg';
-import womenGold from '../assets/images/womens/women-shirt.jpg';
-import womenHand from '../assets/images/womens/women-watch.jpg';
+import womenShirt from '../assets/images/womens/women-shirt.jpg';
+import womenShorts from '../assets/images/womens/women-shorts.jpg';
+import womenGold from '../assets/images/womens/women-gold.jpg';
+import womenHand from '../assets/images/womens/women-hand-chain.jpg';
 
 // Design images
 import vintage from '../assets/images/design/vintage.jpg';

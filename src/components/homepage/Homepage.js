@@ -33,21 +33,14 @@ const Homepage = function Homepage(props) {
         <h1 className={styles['description-one-header']}>{fillInformation.descriptionHeader}</h1>
         <p className={styles['description-one']}>{fillInformation.description}</p>
       </div>
-      <ImgInDiv backgroundImage={vintage} imgStyling={styles.homepageImage} stylingClass={styles['store-image-div']} src={fillInformation.imgOneSrc} alt={fillInformation.imgOneAlt} />
+      <ImgInDiv backgroundImage={vintage} imgStyling={styles.homepageImage} stylingClass={styles['store-image-div']} src={''} alt={''} />
       <div className={`homepage ${styles['extra-info']}`}>
         <h3 className={styles['description-two-header']}>{fillInformation.extraInfoHeading}</h3>
         <p className={styles['description-two']}>
           {fillInformation.extraInfo}
         </p>
       </div>
-      <ImgInDiv backgroundImage={caya} src={fillInformation.imgTwoSrc} stylingClass={styles['caya-div']} alt={fillInformation.imgTwoAlt} />
-      <div className={styles['description-three-div']}>
-        <h2>
-          {fillInformation.moreInfo}
-        </h2>
-        <Carousel />
-        <HomepageFooter styles={styles} />
-      </div>
+      <HomepageFooter styles={styles} />
     </div>
   );
 };

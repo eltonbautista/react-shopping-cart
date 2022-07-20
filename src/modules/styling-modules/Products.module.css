@@ -4,22 +4,18 @@
 
 .product-page-container {
   display: grid;
-  /* min-height: 110%; */
 }
 
 .product-page-men {
-  /* background-image: url('../../assets/images/design/letters-lighting.jpg'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .product-page-women {
-  /* background-image: url('../../assets/images/design/lialg.jpg'); */
   background-size: 100% 300%;
   background-position: center;
   background-attachment: fixed;
-  /* z-index: 2; */
 }
 
 .product-page-ul {
@@ -43,18 +39,16 @@
   height: 100%;
 }
 
-.product-page-first-div > h1 {
+.product-page-first-div>h1 {
   font-family: ostrichSans;
   letter-spacing: 8px;
   font-size: 6vh;
   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #fbfaff 10%,
-    #2f00ff 29%,
-    #ff0000 67%,
-    #ff0000 100%
-  );
+  background-image: linear-gradient(-225deg,
+      #fbfaff 10%,
+      #2f00ff 29%,
+      #ff0000 67%,
+      #ff0000 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -80,40 +74,39 @@
   font-family: ostrichSans;
 }
 
-.product-div > p, .product-div > span {
-    justify-self: center;
-    font-family: ostrichSansBold;
-    font-weight: 900;
-    letter-spacing: 5px;
-    margin-top: 1vh;
+.product-div>p,
+.product-div>span {
+  justify-self: center;
+  font-family: ostrichSansBold;
+  font-weight: 900;
+  letter-spacing: 5px;
+  margin-top: 1vh;
 }
 
 .product-image-div {
-    width: 10vw;
-    height: 30vh;
-    box-shadow: -6px 6px 5px rgba(255, 0, 0, 0.504), -3px 3px 5px rgba(255, 0, 0, 0.504), 6px -6px 5px rgba(0, 0, 255, 0.504), 3px -3px 5px rgba(0, 0, 255, 0.504);
-    /* margin-bottom: 1vh; */
+  width: 10vw;
+  height: 30vh;
+  box-shadow: -6px 6px 5px rgba(255, 0, 0, 0.504), -3px 3px 5px rgba(255, 0, 0, 0.504), 6px -6px 5px rgba(0, 0, 255, 0.504), 3px -3px 5px rgba(0, 0, 255, 0.504);
 }
 
 .product-image {
-    min-width: 100%;
-    min-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-.product-image-div > img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    /* padding */
+.product-image-div>img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .product-list {
-    display: grid;
+  display: grid;
 }
 
 .product-text {
-    font-weight: 100;
-    font-size: 2vh;
+  font-weight: 100;
+  font-size: 2vh;
 }
 
 
@@ -123,7 +116,7 @@
   height: 80px;
   font-size: 20px;
   font-family: ostrichSans;
-  background: linear-gradient(45deg, transparent 5%,rgb(238, 84, 84) 5%);
+  background: linear-gradient(45deg, transparent 5%, rgb(238, 84, 84) 5%);
   border: 0;
   color: blue;
   letter-spacing: 1px;
@@ -145,7 +138,7 @@
   --slice-3: inset(10% -6px 85% 0);
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
-  
+
   content: 'ALTERNATE TEXT';
   display: block;
   position: absolute;
@@ -168,42 +161,52 @@
     clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
   }
+
   10% {
     clip-path: var(--slice-3);
     transform: translate(10px, 10px);
   }
+
   20% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 10px);
   }
+
   30% {
     clip-path: var(--slice-3);
     transform: translate(0px, 5px);
   }
+
   40% {
     clip-path: var(--slice-2);
     transform: translate(-5px, 0px);
   }
+
   50% {
     clip-path: var(--slice-3);
     transform: translate(5px, 0px);
   }
+
   60% {
     clip-path: var(--slice-4);
     transform: translate(5px, 10px);
   }
+
   70% {
     clip-path: var(--slice-2);
     transform: translate(-10px, 10px);
   }
+
   80% {
     clip-path: var(--slice-5);
     transform: translate(20px, -10px);
   }
+
   90% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 0px);
   }
+
   100% {
     clip-path: var(--slice-1);
     transform: translate(0);
@@ -211,6 +214,7 @@
 }
 
 @media (min-width: 768px) {
+
   .product-button,
   .product-button:after {
     width: fit-content;

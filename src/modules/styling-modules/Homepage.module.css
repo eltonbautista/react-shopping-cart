@@ -2,14 +2,13 @@
 
 .homepageDiv,
 .extra-info {
-  color: white;
   display: grid;
 }
 
 .homepageDiv {
   background-size: contain;
   background-attachment: fixed;
-  height: 90vh;
+  min-height: 100%;
 }
 
 /* ABOUT */
@@ -17,59 +16,69 @@
 .about-info {
   display: grid;
   justify-items: center;
-  border: 1px solid wheat;
   width: 50%;
   justify-self: center;
-  margin: 10px 0 10px 0
+  margin: 1em 0 1em 0;
+  grid-template-rows: 0.1fr auto;
 }
 
 .description-one-header,
 .description-two-header {
-  font-size: 36px;
+  font-size: calc(var(--font-size-lg) + 0.5em);
   letter-spacing: 0.5vh;
   font-family: ostrichSansBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .description-one {
-  padding: 10px;
-  font-family: ostrichSansBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 1em;
+  font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   letter-spacing: 0.2vh;
-  font-size: 2.2vh;
+  font-size: var(--font-size-base);
   justify-self: center;
 }
 
 /* EXTRA INFO DIV */
 .extra-info {
-  border: 1px solid wheat;
-  width: 70%;
-  margin: 5px 0 5px 2vw;
+  max-width: 70%;
+  margin: 0.5em 0 0.5em 2em;
   justify-self: start;
+  grid-template-rows: 0.1fr auto;
 }
 
 .description-two-header {
-  padding-left: 1vw;
+  padding-left: 0.55em;
 }
 
 .description-two {
-  font-family: ostrichSansBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   letter-spacing: 0.2vh;
-  font-size: 2.2vh;
+  font-size: var(--font-size-base);
   justify-self: start;
-  padding-left: 1vw;
+  padding-left: 1em;
 }
 
 /* IMAGES */
 
 .store-image-div {
-  width: 99vw;
+  width: 100%;
   justify-self: center;
-  height: 40vh;
+  min-height: 40vh;
   box-shadow: 0 0 30px inset rgb(255, 70, 8);
-  background-color: black;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   opacity: 1;
+  margin-bottom: 4em;
+}
+
+.store-image-div>img {
+  opacity: 0;
+  display: none;
+}
+
+h1,
+h3 {
+  height: fit-content;
 }
 
 .carousel {
@@ -85,37 +94,25 @@
   box-shadow: 5px 5px 8px black, -14px 5px 8px rgba(0, 0, 0, 0.293), 5px 5px 30px inset black, -5px 5px 30px inset black;
   border-radius: 5%;
   transform: rotate(-4deg);
+
 }
 
-.homepageImage {
-  opacity: 0;
-}
+@keyframes opacityChange {
+  0% {
+    opacity: 0;
+  }
 
-.caya-div {
-  display: grid;
-  width: 100%;
-  height: 100vh;
-  background-size: 100% 100%;
-  background-position: 0 7vh;
-  background-attachment: fixed;
-  opacity: 1;
-  z-index: -1;
+  100% {
+    opacity: 1;
+  }
 }
-
 
 .description-three-div {
   display: grid;
-  position: absolute;
-  bottom: -97vh;
-  border: 1px solid wheat;
-  border-bottom: none;
-  width: 100%;
-  justify-self: end;
-  padding: 10px;
-  height: 92vh;
+  max-width: 100%;
 }
 
-.description-three-div>h2 {
+/* .description-three-div>h2 {
   height: fit-content;
   font-size: calc(1rem + 4vh);
   font-family: ostrichSansBold;
@@ -156,7 +153,7 @@
   --color-tertiary: #c5a15f;
   --color-quaternary: #a89777;
   --color-quinary: #836734;
-}
+} */
 
 @keyframes shadows {
   0% {
@@ -243,20 +240,20 @@
 }
 
 .links-div {
-  width: fit-content;
-  /* padding: 2vh; */
+  /* width: fit-content; */
+  max-width: 100%;
   padding: none;
-  /* margin-left: 200px; */
 }
 
 .links-div * {
-  font-family: ostrichSansBold;
+  font-family: ostrichSans;
   font-size: 4vh;
 }
 
 .links-div>h3 {
-  text-decoration: underline;
+  font-family: OstrichSansBold, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   letter-spacing: 0.3vw;
+  font-size: var(--font-size-lg);
 }
 
 .links-div>ul {
@@ -270,9 +267,10 @@
 }
 
 .links-div>ul>li>a {
-  color: wheat;
+  color: var(--color-text);
   text-decoration: none;
-  font-size: 2vh;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.1em;
 }
 
 .links-div>ul>li>a:hover {
@@ -287,14 +285,22 @@
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  font-size: 2vh;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.1em;
 }
 
 /* FOOTER */
 .footer-div {
   display: grid;
   grid-auto-flow: column;
-  justify-content: end;
+  justify-content: start;
   gap: 2vh;
-  padding-right: 2.2vw;
+  padding-left: 3.2em;
+  max-width: 100%;
+
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.footer-div>div {
+  width: 10vw;
 }

@@ -9,7 +9,7 @@
 }
 
 * {
-  color: wheat;
+  color: var(--color-text);
   font-weight: 900;
   margin: 0;
   font-family: palanquin;
@@ -17,7 +17,7 @@
 
 html,
 body {
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -50,6 +50,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  color: var(--color-text);
 }
 
 #root,
@@ -74,19 +75,34 @@ h6 {
 
 /* APP STYLING */
 
-#app>div {
-  padding-top: 15vh;
+:root {
+  --color-text: #eee5d0;
+
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+  --font-size-xl: clamp(2.84rem, 2.68vw + 2.05rem, 4.05rem);
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(11, 1fr);
 }
 
 header {
   display: grid;
   justify-items: center;
-  gap: 1vh;
   background-color: rgb(0, 0, 0);
-  padding-top: 0.4vh;
-  position: fixed;
-  width: 100vw;
+  max-width: 100vw;
   z-index: 5;
+  position: sticky;
+  top: 0;
+  grid-area: 1/1/2/13;
+}
+
+.app-child-container {
+  grid-area: 2/1/12/13;
+  min-height: 100%;
 }
 
 header>a {
@@ -95,15 +111,15 @@ header>a {
 
 header>a>h1 {
   margin-top: 1vh;
-  color: wheat;
+  color: var(--color-text);
   font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: 2.3vh;
+  letter-spacing: 2vh;
   font-size: 5vh;
   text-shadow: -2px 2px 1px red, -4px 2px 1px blue;
   padding-left: 1.5vh;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid white;
+  border-right: 3px solid var(--color-text);
   animation: typewriter 2.5s steps(20) 1s 1 normal both,
     blinkCursor 400ms steps(20) 9 normal,
     textclip 2s linear infinite;
@@ -112,18 +128,18 @@ header>a>h1 {
   background-image: linear-gradient(-225deg,
       #fbfaff 30%,
       #2f00ff 29%,
-      wheat 67%,
-      wheat 100%);
+      var(--color-text) 67%,
+      var(--color-text) 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
-  color: #fff;
+  color: var(--color-text);
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  box-shadow: -1px 1px 5px white, -3px 3px 5px white, 1px -1px 1px white;
+  box-shadow: -1px 1px 5px var(--color-text), -3px 3px 5px var(--color-text), 1px -1px 1px var(--color-text);
 }
 
 @keyframes textclip {
@@ -163,8 +179,8 @@ header>a>h1 {
 
 #nav-bar>a>button {
   background: none;
-  color: wheat;
-  font-size: 22px;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
   letter-spacing: 2px;
   font-family: ostrichSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border: none;
@@ -192,7 +208,7 @@ header>a>h1 {
 #cart-button>span {
   width: 28px;
   font-weight: 600;
-  color: red;
+  color: var(--color-text);
 }
 
 footer {
@@ -203,7 +219,7 @@ footer {
   background-color: rgb(38, 25, 39);
   height: 5.2vh;
   border: 1px solid red;
-  min-width: 100vw;
+  max-width: 100vw;
   align-self: flex-end;
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import ImgInDiv from '../homepage/ImgInDiv' ;
+import ImgInDiv from '../homepage/ImgInDiv';
 import noSpacesOrSingleQuotes from "../../modules/no-spaces-or-single-quotes";
 import styles from '../../modules/styling-modules/Products.module.css';
 
@@ -21,9 +21,9 @@ const Product = (props) => {
         {productPrice}
       </p>
       {children}
-      <button className={styles['product-button']} data-num={props.num} onClick={props.onClickHandler} type="button" >{!isInCart ? 'Add to bag' : 'Remove from bag' }</button>
+      <button className={styles['product-button']} data-num={props.num} onClick={props.onClickHandler} type="button" >{!isInCart ? 'Add to bag' : 'Remove from bag'}</button>
     </div>
-  )
+  );
 };
 
 export default Product;

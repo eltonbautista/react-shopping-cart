@@ -25,10 +25,10 @@ const ShoppingCart = (props) => {
         Cart Total: {parseFloat(myTotal).toFixed(2)}
       </div>
       <footer>
-      <span>Created with ♥ by: <a href="https://twitter.com/psychtotech" target="_blank" rel="noopener noreferrer">PsychToTech</a></span>
+        <span>Created with ♥ by: <a href="https://github.com/eltonbautista" target="_blank" rel="noopener noreferrer">eltonbautista</a></span>
       </footer>
     </div>
   );
-}
+};
 
 export default ShoppingCart;
