@@ -1,7 +1,7 @@
 .page {
   display: grid;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100%;
   margin-top: 5vh;
 }
 
@@ -9,7 +9,7 @@
 .page>h3 {
   font-family: ostrichSans;
   letter-spacing: 8px;
-  width: 50vw;
+  width: 80vw;
   justify-self: center;
 }
 
@@ -62,7 +62,8 @@
   padding-top: 1vh;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5em;
   width: 50%;
   justify-self: center;
 }
@@ -75,4 +76,9 @@
   display: grid;
   align-content: center;
   height: fit-content;
+}
+
+footer {
+  width: 99vw;
+  border: none;
 }

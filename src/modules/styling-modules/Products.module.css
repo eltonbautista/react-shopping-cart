@@ -106,7 +106,8 @@
 
 .product-text {
   font-weight: 100;
-  font-size: 2vh;
+  font-size: var(--font-size-lg);
+  white-space: nowrap;
 }
 
 
