@@ -83,6 +83,16 @@ h6 {
   --font-size-xl: clamp(2.84rem, 2.68vw + 2.05rem, 4.05rem);
 }
 
+@media (min-width: 2000px) {
+  :root {
+    --color-text: #eee5d0;
+
+    --font-size-base: clamp(1rem, 0.54vw + 0.91rem, 2.59rem);
+    --font-size-lg: clamp(1.2rem, 0.8vw + 1.2rem, 2.5rem);
+    --font-size-xl: clamp(2.84rem, 2.68vw + 2.05rem, 4.55rem);
+  }
+}
+
 #app {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -98,6 +108,14 @@ header {
   position: sticky;
   top: 0;
   grid-area: 1/1/2/13;
+}
+
+* {
+  font-family: OstrichSansBold;
+}
+
+strong {
+  font-weight: 900;
 }
 
 .app-child-container {
