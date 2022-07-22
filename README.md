@@ -1,8 +1,10 @@
+Live Preview: https://meemo-boutique.vercel.app/
+
+
 **Objectives:**
 
 - Main: Increase my understanding in single-page application work-flow, and React Router.
 - Sub: Learn and apply better practices with React function components, hooks, and lifecycle, and also improve my testing ability.
-
 
 **Highlights:**
 
