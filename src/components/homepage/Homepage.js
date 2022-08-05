@@ -22,7 +22,12 @@ const Homepage = function Homepage(props) {
       <div className={`homepage ${styles['extra-info']}`}>
         <h3 className={styles['description-two-header']}>Come As You Are</h3>
         <p className={styles['description-two']}>
-          One of the core foundations of our company is our motto:<strong>COME AS YOU ARE</strong>. We are a company with various differing backgrounds. This is why we emphasize the value of embracing those who may be <em>different</em> from us. As many have given us a chance, our focus is to give others that same opportunity. We aim to deliver our goals through the <em>brilliance</em> of our <strong>award-winning</strong> designers, individuals who have come from all parts of the world.
+          One of the core foundations of our company is our motto; <strong>COME AS YOU ARE</strong>.
+          We are a company with various differing backgrounds.
+          This is why we emphasize the value of embracing those who may be <em>different</em> from us.
+          As many have given us a chance and believed in us, we promise to give others the same treatment and opportunity.
+          We aim to deliver our goals through the <em>brilliance</em> of our <strong>award-winning</strong> designers,
+          individuals who have come from all parts of the world to create something truly unique; <em>Meemo Boutique</em>.
         </p>
       </div>
       <HomepageFooter styles={styles} />

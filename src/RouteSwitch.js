@@ -13,7 +13,7 @@ import Product from './components/product-components/Product';
 const RouteSwitch = (props) => {
   // MY STATES
   const myProducts = [...arrayOfProducts[0], ...arrayOfProducts[1]];
-  
+
   const [productObjects, setProductObjects] = useState(myProducts);
 
   const [cartProducts, setCartProducts] = useState([]);
@@ -25,9 +25,9 @@ const RouteSwitch = (props) => {
 
     supplyArr.forEach((prod) => {
       arrToPushInto.push(<Product productObject={prod} num={myProducts.indexOf(prod)} onChange={quantityInputHandler} onClickHandler={productButtonHandler} />);
-    })
+    });
     return arrToPushInto;
-  }
+  };
 
   const allProducts = createMyProducts(myProducts);
 
@@ -38,7 +38,7 @@ const RouteSwitch = (props) => {
   const allProductComponents = [...mensProducts, ...womensProducts];
 
   const productPageChildren =
-  [<ProductContainer products={mensProducts} />, <ProductContainer products={womensProducts} />, ];
+    [<ProductContainer products={mensProducts} />, <ProductContainer products={womensProducts} />,];
 
   // Function which handles putting "isInCart = true" products into Cart page
 
@@ -56,10 +56,10 @@ const RouteSwitch = (props) => {
 
     productObjects[buttonNumber].isInCartFunction();
     productObjects[buttonNumber].setQuantity(1);
-      
-      // Every single time a product object's property is modified, productObjects state is set to a "new" copy of productObjects
-      setProductObjects([...productObjects]);
-      toShoppingCartHandler();
+
+    // Every single time a product object's property is modified, productObjects state is set to a "new" copy of productObjects
+    setProductObjects([...productObjects]);
+    toShoppingCartHandler();
   };
 
   // eventHandler used for each product's input.
@@ -72,43 +72,42 @@ const RouteSwitch = (props) => {
     setProductObjects([...productObjects]);
   }
 
-  // basename='/react-shopping-cart'
-  return (    
-   <BrowserRouter basename={props.basename}>
+  return (
+    <BrowserRouter basename={props.basename}>
       <Routes>
         <Route
           element=
-        {<App
-          title='Meemo Boutique' 
-          cartEventHandler={toShoppingCartHandler}
-          cartLength={cartProducts.length}
-        />}>
+          {<App
+            title='Meemo Boutique'
+            cartEventHandler={toShoppingCartHandler}
+            cartLength={cartProducts.length}
+          />}>
           <Route path='/' element={<Homepage />} />
           <Route path='mens' element=
-          {<ProductPage 
-            productHeading= "Men's" 
-            children={productPageChildren[0]} 
-            productButtonHandler={productButtonHandler} 
+            {<ProductPage
+              productHeading="Men's"
+              children={productPageChildren[0]}
+              productButtonHandler={productButtonHandler}
             />}
           />
           <Route path='womens' element=
-          {<ProductPage 
-            productHeading= "Women's" 
-            children={productPageChildren[1]} 
-            productButtonHandler={productButtonHandler} 
-            />} 
+            {<ProductPage
+              productHeading="Women's"
+              children={productPageChildren[1]}
+              productButtonHandler={productButtonHandler}
+            />}
           />
 
-          <Route path='shopping-cart' 
-            element={<ShoppingCart 
-            myProductsArray={cartProducts} 
-            quantHandler={quantityInputHandler} 
-            items={cartProducts.length} />} 
+          <Route path='shopping-cart'
+            element={<ShoppingCart
+              myProductsArray={cartProducts}
+              quantHandler={quantityInputHandler}
+              items={cartProducts.length} />}
           />
         </Route>
       </Routes>
-   </BrowserRouter>);
-  }
+    </BrowserRouter>);
+};
 
-  export default React.memo(RouteSwitch);
+export default React.memo(RouteSwitch);
 

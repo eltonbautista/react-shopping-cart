@@ -15,9 +15,7 @@ const ProductPage = (props) => {
   return (
     <div id="product-page" data-testid='product-page'
       className={productHeading === 'Men\'s' ? styles['product-page-men'] : styles['product-page-women']}
-      style={productHeading === 'Men\'s' ? mensBackground : womensBackground}
-    >
-
+      style={productHeading === 'Men\'s' ? mensBackground : womensBackground}>
       <div className={styles['product-page-first-div']}>
         <h1>{productHeading}</h1>
       </div>
